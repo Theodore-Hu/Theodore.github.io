@@ -1,25 +1,34 @@
-shell --command="cat > Theodore.github.io/index.html << 'EOL'
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>胡云韬 - 个人主页</title>
+    <title>Yuntao Hu - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>胡云韬</h1>
-            <p>港口海岸及近海工程 | 中建香港</p>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>Yuntao Hu</h1>
+                    <h2>Coastal & Ocean Engineer</h2>
+                    <p>China Construction Hong Kong</p>
+                </div>
+                <div class="header-image">
+                    <div class="profile-circle"></div>
+                </div>
+            </div>
             <nav>
                 <ul>
-                    <li><a href="#about">关于我</a></li>
-                    <li><a href="#experience">工作经历</a></li>
-                    <li><a href="#education">教育背景</a></li>
-                    <li><a href="#skills">技能特长</a></li>
-                    <li><a href="#projects">项目经历</a></li>
-                    <li><a href="#contact">联系方式</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,15 +36,15 @@ shell --command="cat > Theodore.github.io/index.html << 'EOL'
 
     <section id="about" class="section">
         <div class="container">
-            <h2>关于我</h2>
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
             <div class="about-content">
-                <div class="profile-image">
-                    <img src="profile.jpg" alt="胡云韬照片" id="profile-img">
-                </div>
                 <div class="about-text">
-                    <p>我是胡云韬，中国海洋大学港口海岸及近海工程专业硕士毕业生，现就职于中建香港，是"海之子"校招计划的一员。</p>
-                    <p>我具备多样化的技能和丰富的领导经验，擅长团队协作与项目管理。在学术研究方面，我专注于海上油气混输与深海采矿输运管道内的多相流流场分析。</p>
-                    <p>作为一个主观能动性强的人，我热衷于探索新领域，追求卓越，并能在多种环境中表现出色。</p>
+                    <p>I am Yuntao Hu, a Master's graduate in Port, Coastal and Offshore Engineering from Ocean University of China. I will soon be joining China Construction Hong Kong as part of the "Hai Zhi Zi" recruitment program.</p>
+                    <p>With diverse skills and extensive leadership experience, I excel in team collaboration and project management. My academic research focuses on multiphase flow field analysis in offshore oil and gas transport and deep-sea mining transport pipelines.</p>
+                    <p>As a proactive individual, I am passionate about exploring new domains, pursuing excellence, and performing exceptionally in various environments.</p>
                 </div>
             </div>
         </div>
@@ -43,38 +52,53 @@ shell --command="cat > Theodore.github.io/index.html << 'EOL'
 
     <section id="experience" class="section">
         <div class="container">
-            <h2>工作经历</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2025至今</div>
-                    <div class="timeline-content">
-                        <h3>中建香港</h3>
-                        <p>海之子校招计划</p>
-                        <p>参与香港地区工程建设项目，负责港口与海岸工程相关工作。</p>
+            <div class="section-header">
+                <h2>Experience</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>China Construction Hong Kong</h3>
+                        <p class="position">Hai Zhi Zi Recruitment Program</p>
+                        <p class="date">Starting 2025</p>
+                        <p>Participating in engineering construction projects in Hong Kong, responsible for port and coastal engineering related work.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2024.01-2024.02</div>
-                    <div class="timeline-content">
-                        <h3>东莞芯技通电子科技有限公司</h3>
-                        <p>外贸业务员</p>
-                        <p>负责阿里巴巴国际站一个子店铺，从事外贸、产线生产、运营销售、RFQ等工作。</p>
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>Dongguan Xinjitong Electronic Technology Co., Ltd.</h3>
+                        <p class="position">Foreign Trade Business</p>
+                        <p class="date">Jan 2024 - Feb 2024</p>
+                        <p>Managed Alibaba International Station sub-store, handling foreign trade, production line, operations, sales, and RFQ processes.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2024.08</div>
-                    <div class="timeline-content">
-                        <h3>中国化学工程第十六建设有限公司</h3>
-                        <p>工程助理</p>
-                        <p>参与安全检查、编写施工日志、整理资料。</p>
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>China Chemical Engineering 16th Construction Co., Ltd.</h3>
+                        <p class="position">Engineering Assistant</p>
+                        <p class="date">Aug 2024</p>
+                        <p>Participated in safety inspections, construction log writing, and document organization.</p>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2019.06-2019.08</div>
-                    <div class="timeline-content">
-                        <h3>朵朵琴行</h3>
-                        <p>钢琴教师</p>
-                        <p>指导3-5级以下学生钢琴演奏技巧。</p>
+                <div class="experience-item">
+                    <div class="experience-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="experience-details">
+                        <h3>Duoduo Piano School</h3>
+                        <p class="position">Piano Teacher</p>
+                        <p class="date">Jun 2019 - Aug 2019</p>
+                        <p>Guided students below grade 3-5 in piano performance techniques.</p>
                     </div>
                 </div>
             </div>
@@ -83,56 +107,86 @@ shell --command="cat > Theodore.github.io/index.html << 'EOL'
 
     <section id="education" class="section">
         <div class="container">
-            <h2>教育背景</h2>
-            <div class="education-item">
-                <h3>中国海洋大学</h3>
-                <p>工程学院 港口海岸及近海工程 硕士</p>
-                <p>2022.09-2025.06</p>
-                <p>成绩排名：5/26  GPA:3.68/4</p>
-                <p>主修课程：数学物理方法、现代施工技术及工程管理、海洋工程环境、城市水资源规划、水利工程经济学</p>
+            <div class="section-header">
+                <h2>Education</h2>
+                <div class="underline"></div>
             </div>
-            <div class="education-item">
-                <h3>中国海洋大学</h3>
-                <p>工程学院 港口航道与海岸工程 学士</p>
-                <p>2017.09-2021.06</p>
+            <div class="education-container">
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Ocean University of China</h3>
+                        <p class="degree">Master's Degree in Port, Coastal and Offshore Engineering</p>
+                        <p class="date">Sep 2022 - Jun 2025</p>
+                        <p>Ranking: 5/26  GPA: 3.68/4</p>
+                        <p>Core courses: Mathematical Physics Methods, Modern Construction Technology and Engineering Management, Marine Engineering Environment, Urban Water Resources Planning, Hydraulic Engineering Economics</p>
+                    </div>
+                </div>
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-details">
+                        <h3>Ocean University of China</h3>
+                        <p class="degree">Bachelor's Degree in Port, Channel and Coastal Engineering</p>
+                        <p class="date">Sep 2017 - Jun 2021</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="skills" class="section">
         <div class="container">
-            <h2>技能特长</h2>
+            <div class="section-header">
+                <h2>Skills</h2>
+                <div class="underline"></div>
+            </div>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>语言能力</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Languages</h3>
                     <ul>
-                        <li>英语CET-6，数次担任国际生翻译</li>
-                        <li>基础粤语视听说能力</li>
-                        <li>一年西班牙语学习经历</li>
+                        <li>English CET-6, multiple experiences as translator for international students</li>
+                        <li>Basic Cantonese listening, speaking and comprehension</li>
+                        <li>One year of Spanish language study</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>计算机技能</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Computer Skills</h3>
                     <ul>
-                        <li>办公软件：熟练使用Office系列软件</li>
-                        <li>专业软件：流体仿真软件Ansys Fluent</li>
-                        <li>编程语言：C语言、Matlab</li>
+                        <li>Office software: Proficient in Microsoft Office suite</li>
+                        <li>Professional software: Fluid simulation software Ansys Fluent</li>
+                        <li>Programming languages: C language, Matlab</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>艺术与体育</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Arts & Sports</h3>
                     <ul>
-                        <li>钢琴十级，具备舞台表演经验</li>
-                        <li>擅长演唱</li>
-                        <li>擅长多种球类运动</li>
+                        <li>Piano Grade 10, stage performance experience</li>
+                        <li>Skilled in singing</li>
+                        <li>Proficient in various ball sports</li>
                     </ul>
                 </div>
                 <div class="skill-category">
-                    <h3>领导能力</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Leadership</h3>
                     <ul>
-                        <li>团队管理与协调</li>
-                        <li>活动策划与执行</li>
-                        <li>资源整合与外联拓展</li>
+                        <li>Team management and coordination</li>
+                        <li>Event planning and execution</li>
+                        <li>Resource integration and external development</li>
                     </ul>
                 </div>
             </div>
@@ -141,31 +195,42 @@ shell --command="cat > Theodore.github.io/index.html << 'EOL'
 
     <section id="projects" class="section">
         <div class="container">
-            <h2>项目经历</h2>
-            <div class="project-item">
-                <h3>海上油气混输与深海采矿输运管道内的多相流流场分析</h3>
-                <p>2022.08-2025.06</p>
-                <div class="project-details">
-                    <h4>参与项目</h4>
-                    <p>基于双属性光滑粒子的船载疏浚管线高浓度沙石浆冲蚀问题研究/52171280；《深海多金属结核项目总体规划》项目 专项五:深海采矿的关键核心技术问题 课题5.2:超深水粗颗粒矿物安全输送技术</p>
-                    
-                    <h4>主要工作</h4>
-                    <p>基于气液两相流管道、微控流，进行理论分析，使用Ansys Fluent耦合多种软件进行仿真分析，以C语言为基础，对软件进行二次开发。应用Matlab、Origin等软件进行数据处理，编写代码千余行。</p>
-                    
-                    <h4>取得成果</h4>
-                    <p>EI精品期刊《工程力学》一作一篇，第二篇SCI论文在投。</p>
-                </div>
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="underline"></div>
             </div>
-            
-            <div class="project-item">
-                <h3>中国海洋大学百年校庆校友采访</h3>
-                <p>2023.06-2023.09</p>
-                <div class="project-details">
-                    <h4>实践内容</h4>
-                    <p>带队采访两位正厅级校友。负责撰写采访稿，负责工程学院所有采访稿的修稿工作。</p>
-                    
-                    <h4>实践成果</h4>
-                    <p>工程学院所有13篇文稿均达到优秀等级，将于百年校庆人物志上刊登。</p>
+            <div class="projects-container">
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="project-details">
+                        <h3>Multiphase Flow Field Analysis in Offshore Oil and Gas Transport and Deep-Sea Mining Transport Pipelines</h3>
+                        <p class="date">Aug 2022 - Jun 2025</p>
+                        <h4>Project Participation</h4>
+                        <p>Research on the erosion problem of high-concentration sandy slurry in ship-borne dredging pipelines based on dual-attribute smooth particles/52171280; "Deep-sea polymetallic nodule project overall planning" project Special 5: Key core technical issues of deep-sea mining Task 5.2: Ultra-deep water coarse-grained mineral safe transport technology</p>
+                        
+                        <h4>Main Work</h4>
+                        <p>Based on gas-liquid two-phase flow pipes and micro-control flow, theoretical analysis, using Ansys Fluent coupled with various software for simulation analysis, and secondary development based on C language. Data processing using Matlab, Origin and other software, writing thousands of lines of code.</p>
+                        
+                        <h4>Achievements</h4>
+                        <p>First author of one paper in EI premium journal "Engineering Mechanics", second SCI paper under submission.</p>
+                    </div>
+                </div>
+                
+                <div class="project-item">
+                    <div class="project-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="project-details">
+                        <h3>Ocean University of China Centennial Alumni Interviews</h3>
+                        <p class="date">Jun 2023 - Sep 2023</p>
+                        <h4>Project Content</h4>
+                        <p>Led the team to interview two department-level alumni. Responsible for writing interview manuscripts and editing all interview manuscripts for the College of Engineering.</p>
+                        
+                        <h4>Outcomes</h4>
+                        <p>All 13 manuscripts from the College of Engineering achieved excellent grades and will be published in the Centennial Personalities Journal.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,41 +238,59 @@ shell --command="cat > Theodore.github.io/index.html << 'EOL'
 
     <section id="contact" class="section">
         <div class="container">
-            <h2>联系方式</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>电话</h3>
-                    <p>17860723223</p>
-                </div>
-                <div class="contact-item">
-                    <h3>邮箱</h3>
-                    <p>HuYunt1999@163.com</p>
-                </div>
+            <div class="section-header">
+                <h2>Contact</h2>
+                <div class="underline"></div>
             </div>
-            <div class="contact-form">
-                <h3>给我留言</h3>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">姓名</label>
-                        <input type="text" id="name" name="name" required>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>+86 17860723223</p>
                     </div>
-                    <div class="form-group">
-                        <label for="email">邮箱</label>
-                        <input type="email" id="email" name="email" required>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>HuYunt1999@163.com</p>
                     </div>
-                    <div class="form-group">
-                        <label for="message">留言内容</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit">发送</button>
-                </form>
+                </div>
+                <div class="contact-form">
+                    <h3>Leave a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 胡云韬. All Rights Reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2024 Yuntao Hu. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                </div>
+            </div>
         </div>
     </footer>
 
