@@ -1,4 +1,3 @@
-shell --command="cat > Theodore.github.io/styles.css << 'EOL'
 /* Global Styles */
 :root {
     --primary-color: #e63946;
