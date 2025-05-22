@@ -3,302 +3,578 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuntao Hu - Portfolio</title>
+    <meta name="description" content="Theodore Hu - Personal Portfolio">
+    <meta name="theme-color" content="#121212">
+    <title>Theodore Hu | Personal Portfolio</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preloader -->
+    <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #121212;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        
+        .preloader-logo {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.5rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.5s;
+        }
+        
+        .preloader-bar {
+            width: 150px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .preloader-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            animation: progress 2s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes progress {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+    </style>
 </head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="header-text">
-                    <h1>Theodore Hu</h1>
-                    <h2>Coastal & Ocean Engineer</h2>
-                    <p>China Construction Hong Kong</p>
-                </div>
-                <div class="header-image">
-                    <div class="profile-circle"></div>
-                </div>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-logo">THEODORE HU</div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">T.H</a>
+            </div>
+            <div class="nav-toggle">
+                <div class="nav-toggle-icon"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="reveal-text">Theodore Hu</h1>
+            <p class="hero-subtitle reveal-text-delay">Civil Engineer & Project Manager</p>
+            <div class="hero-tags">
+                <span class="tag">China Construction Engineering (Hong Kong) Ltd.</span>
+                <span class="tag">Ocean University of China</span>
+                <span class="tag">Hong Kong</span>
+            </div>
+            <div class="hero-cta">
+                <a href="#about" class="btn-primary">Discover More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>About Me</h2>
-                <div class="underline"></div>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I am Theodore Hu, a Master's graduate in Port, Coastal and Offshore Engineering from Ocean University of China. I will soon be joining China Construction Hong Kong as part of the "Hai Zhi Zi" recruitment program.</p>
-                    <p>With diverse skills and extensive leadership experience, I excel in team collaboration and project management. My academic research focuses on multiphase flow field analysis in offshore oil and gas transport and deep-sea mining transport pipelines.</p>
-                    <p>As a proactive individual, I am passionate about exploring new domains, pursuing excellence, and performing exceptionally in various environments.</p>
+            
+            <div class="about-container">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Theodore Hu">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="fade-in">I'm a civil engineer currently working at China Construction Engineering (Hong Kong) Ltd., where I joined through the "Maritime Talents" recruitment program after completing my master's degree in Harbor, Coastal and Offshore Engineering.</p>
+                        <p class="fade-in">With a background in both technical engineering and project management, I bring a unique blend of analytical problem-solving and leadership skills to every project. My experience spans from coastal engineering research to practical construction management.</p>
+                        <p class="fade-in">Beyond my professional pursuits, I'm an accomplished pianist (Grade 10) and sports enthusiast. I believe in maintaining a balance between technical expertise and creative expression, which allows me to approach challenges from multiple perspectives.</p>
+                    </div>
+                    <div class="about-info">
+                        <div class="info-item fade-in">
+                            <div class="info-icon">
+                                <i class="ri-building-line"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Position</h3>
+                                <p>Project Engineer</p>
+                            </div>
+                        </div>
+                        <div class="info-item fade-in">
+                            <div class="info-icon">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Location</h3>
+                                <p>Hong Kong</p>
+                            </div>
+                        </div>
+                        <div class="info-item fade-in">
+                            <div class="info-icon">
+                                <i class="ri-book-mark-line"></i>
+                            </div>
+                            <div class="info-content">
+                                <h3>Motto</h3>
+                                <p>Stay passionate, pursue excellence</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section">
+    <!-- Experience Section -->
+    <section id="experience" class="section dark-section">
         <div class="container">
             <div class="section-header">
-                <h2>Experience</h2>
-                <div class="underline"></div>
+                <h2 class="section-title">Experience & Education</h2>
+                <div class="section-line"></div>
             </div>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="experience-details">
-                        <h3>China Construction Hong Kong</h3>
-                        <p class="position">Hai Zhi Zi Recruitment Program</p>
-                        <p class="date">Starting 2025</p>
-                        <p>Participating in engineering construction projects in Hong Kong, responsible for port and coastal engineering related work.</p>
+            
+            <div class="timeline">
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">Present</h3>
+                        <h4 class="timeline-title">China Construction Engineering (Hong Kong) Ltd.</h4>
+                        <p>Working as a project engineer on major infrastructure developments in Hong Kong. Applying both technical knowledge and management skills to deliver complex projects.</p>
                     </div>
                 </div>
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="experience-details">
-                        <h3>Dongguan Xinjitong Electronic Technology Co., Ltd.</h3>
-                        <p class="position">Foreign Trade Business</p>
-                        <p class="date">Jan 2024 - Feb 2024</p>
-                        <p>Managed Alibaba International Station sub-store, handling foreign trade, production line, operations, sales, and RFQ processes.</p>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2022-2025</h3>
+                        <h4 class="timeline-title">Master's Degree, Ocean University of China</h4>
+                        <p>Harbor, Coastal and Offshore Engineering (GPA: 3.68/4.0). Conducted research on multiphase flow analysis in subsea pipelines. Published in the EI Journal "Engineering Mechanics".</p>
                     </div>
                 </div>
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <i class="fas fa-hammer"></i>
-                    </div>
-                    <div class="experience-details">
-                        <h3>China Chemical Engineering 16th Construction Co., Ltd.</h3>
-                        <p class="position">Engineering Assistant</p>
-                        <p class="date">Aug 2024</p>
-                        <p>Participated in safety inspections, construction log writing, and document organization.</p>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2019-2020</h3>
+                        <h4 class="timeline-title">President, Alumni Volunteer Association</h4>
+                        <p>Led a team of 100+ members, organized numerous events, and managed alumni relations. Developed strong leadership and coordination skills while securing sponsorships and partnerships.</p>
                     </div>
                 </div>
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <i class="fas fa-music"></i>
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2017-2021</h3>
+                        <h4 class="timeline-title">Bachelor's Degree, Ocean University of China</h4>
+                        <p>Harbor, Channel, and Coastal Engineering. Earned multiple scholarships and awards including Outstanding Youth League Member and Academic Scholarship.</p>
                     </div>
-                    <div class="experience-details">
-                        <h3>Duoduo Piano School</h3>
-                        <p class="position">Piano Teacher</p>
-                        <p class="date">Jun 2019 - Aug 2019</p>
-                        <p>Guided students below grade 3-5 in piano performance techniques.</p>
+                </div>
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <h3 class="timeline-year">2024</h3>
+                        <h4 class="timeline-title">International Business Development</h4>
+                        <p>Gained experience in international trade and business development at Dongguan Chipwell Electronic Technology Co., managing online platforms and handling client inquiries.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="education" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Education</h2>
-                <div class="underline"></div>
-            </div>
-            <div class="education-container">
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="education-details">
-                        <h3>Ocean University of China</h3>
-                        <p class="degree">Master's Degree in Port, Coastal and Offshore Engineering</p>
-                        <p class="date">Sep 2022 - Jun 2025</p>
-                        <p>Ranking: 5/26  GPA: 3.68/4</p>
-                        <p>Core courses: Mathematical Physics Methods, Modern Construction Technology and Engineering Management, Marine Engineering Environment, Urban Water Resources Planning, Hydraulic Engineering Economics</p>
-                    </div>
-                </div>
-                <div class="education-item">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-details">
-                        <h3>Ocean University of China</h3>
-                        <p class="degree">Bachelor's Degree in Port, Channel and Coastal Engineering</p>
-                        <p class="date">Sep 2017 - Jun 2021</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Skills</h2>
-                <div class="underline"></div>
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="section-line"></div>
             </div>
+            
             <div class="skills-container">
                 <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-language"></i>
+                    <div class="skill-group fade-in">
+                        <h3 class="skill-title">Technical Skills</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Engineering Analysis</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Project Management</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Construction Planning</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Fluid Dynamics Simulation</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>English CET-6, multiple experiences as translator for international students</li>
-                        <li>Basic Cantonese listening, speaking and comprehension</li>
-                        <li>One year of Spanish language study</li>
-                    </ul>
+                    
+                    <div class="skill-group fade-in">
+                        <h3 class="skill-title">Software & Tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">ANSYS Fluent</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MATLAB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">C Programming</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Microsoft Office Suite</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-laptop-code"></i>
+                    <div class="skill-group fade-in">
+                        <h3 class="skill-title">Languages</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Chinese (Native)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 100%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">English (Professional)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Cantonese (Basic)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 40%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Spanish (Elementary)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Computer Skills</h3>
-                    <ul>
-                        <li>Office software: Proficient in Microsoft Office suite</li>
-                        <li>Professional software: Fluid simulation software Ansys Fluent</li>
-                        <li>Programming languages: C language, Matlab</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-palette"></i>
+                    
+                    <div class="skill-group fade-in">
+                        <h3 class="skill-title">Personal Skills</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <span class="skill-name">Leadership</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Piano Performance (Grade 10)</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Basketball</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Project Coordination</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <h3>Arts & Sports</h3>
-                    <ul>
-                        <li>Piano Grade 10, stage performance experience</li>
-                        <li>Skilled in singing</li>
-                        <li>Proficient in various ball sports</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Leadership</h3>
-                    <ul>
-                        <li>Team management and coordination</li>
-                        <li>Event planning and execution</li>
-                        <li>Resource integration and external development</li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Gallery Section -->
+    <section id="gallery" class="section dark-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Life & Moments</h2>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="professional">Professional</button>
+                <button class="filter-btn" data-filter="academic">Academic</button>
+                <button class="filter-btn" data-filter="personal">Personal</button>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item professional" data-category="professional">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1515923152115-758a6b16f35e?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Construction Site">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Project Site Visit</h3>
+                                <p>Hong Kong · 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item academic" data-category="academic">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Research Lab">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Research Lab</h3>
+                                <p>Ocean University · 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item personal" data-category="personal">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Piano Performance">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Piano Recital</h3>
+                                <p>Shanghai · 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item professional" data-category="professional">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Team Meeting">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Team Meeting</h3>
+                                <p>Hong Kong · 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item academic" data-category="academic">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="University Campus">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Campus Life</h3>
+                                <p>Ocean University · 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item personal" data-category="personal">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1546519638-68e109acd27d?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Basketball">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Basketball Tournament</h3>
+                                <p>Qingdao · 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
     <section id="projects" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Projects</h2>
-                <div class="underline"></div>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
             </div>
+            
             <div class="projects-container">
-                <div class="project-item">
-                    <div class="project-icon">
-                        <i class="fas fa-water"></i>
+                <div class="project-item fade-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1507334451450-8a3efc777cd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Research Project">
                     </div>
-                    <div class="project-details">
-                        <h3>Multiphase Flow Field Analysis in Offshore Oil and Gas Transport and Deep-Sea Mining Transport Pipelines</h3>
-                        <p class="date">Aug 2022 - Jun 2025</p>
-                        <h4>Project Participation</h4>
-                        <p>Research on the erosion problem of high-concentration sandy slurry in ship-borne dredging pipelines based on dual-attribute smooth particles/52171280; "Deep-sea polymetallic nodule project overall planning" project Special 5: Key core technical issues of deep-sea mining Task 5.2: Ultra-deep water coarse-grained mineral safe transport technology</p>
-                        
-                        <h4>Main Work</h4>
-                        <p>Based on gas-liquid two-phase flow pipes and micro-control flow, theoretical analysis, using Ansys Fluent coupled with various software for simulation analysis, and secondary development based on C language. Data processing using Matlab, Origin and other software, writing thousands of lines of code.</p>
-                        
-                        <h4>Achievements</h4>
-                        <p>First author of one paper in EI premium journal "Engineering Mechanics", second SCI paper under submission.</p>
+                    <div class="project-content">
+                        <h3 class="project-title">Multiphase Flow Analysis in Subsea Pipelines</h3>
+                        <p class="project-description">Led research on fluid dynamics in deep-sea mining transport systems. Developed simulation models using ANSYS Fluent and custom C programming to optimize pipeline designs for offshore operations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Fluid Dynamics</span>
+                            <span class="project-tag">Simulation</span>
+                            <span class="project-tag">Offshore Engineering</span>
+                        </div>
+                        <div class="project-achievements">
+                            <p>Published in Engineering Mechanics (EI Journal)</p>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="project-item">
-                    <div class="project-icon">
-                        <i class="fas fa-microphone"></i>
+                <div class="project-item fade-in">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Infrastructure Project">
                     </div>
-                    <div class="project-details">
-                        <h3>Ocean University of China Centennial Alumni Interviews</h3>
-                        <p class="date">Jun 2023 - Sep 2023</p>
-                        <h4>Project Content</h4>
-                        <p>Led the team to interview two department-level alumni. Responsible for writing interview manuscripts and editing all interview manuscripts for the College of Engineering.</p>
-                        
-                        <h4>Outcomes</h4>
-                        <p>All 13 manuscripts from the College of Engineering achieved excellent grades and will be published in the Centennial Personalities Journal.</p>
+                    <div class="project-content">
+                        <h3 class="project-title">Centennial Anniversary Alumni Documentation</h3>
+                        <p class="project-description">Led a team conducting interviews with distinguished alumni for Ocean University's centennial celebration. Managed the editing process for all Engineering School interview manuscripts.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Project Management</span>
+                            <span class="project-tag">Editorial</span>
+                            <span class="project-tag">Leadership</span>
+                        </div>
+                        <div class="project-achievements">
+                            <p>All 13 manuscripts received excellent ratings and were selected for publication</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Contact Section -->
+    <section id="contact" class="section dark-section">
         <div class="container">
             <div class="section-header">
-                
-                <h2>Contact Me</h2>
-                <div class="underline"></div>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
             </div>
+            
             <div class="contact-container">
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
+                            <i class="ri-map-pin-line"></i>
                         </div>
-                        <h3>Email</h3>
-                        <p>Theodorehuncy@outlook.com</p>
+                        <div class="contact-text">
+                            <h3>Location</h3>
+                            <p>Hong Kong SAR, China</p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
+                            <i class="ri-mail-line"></i>
                         </div>
-                        <h3>Phone</h3>
-                        <p>+86 150-5324-5201</p>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>HuYunt1999@163.com</p>
+                        </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="ri-phone-line"></i>
                         </div>
-                        <h3>Location</h3>
-                        <p>Qingdao, China</p>
+                        <div class="contact-text">
+                            <h3>Phone</h3>
+                            <p>+86 178 6072 3223</p>
+                        </div>
                     </div>
                 </div>
+                
                 <div class="contact-form">
-                    <h3>Send me a message</h3>
                     <form id="contactForm">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" required>
+                            <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" required>
+                            <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" rows="5" required></textarea>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
-                        <button type="submit">Send Message</button>
+                        <button type="submit" class="btn-primary">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div>
-                    <p>&copy; 2024 Theodore Hu. All rights reserved.</p>
+                <div class="footer-logo">
+                    <a href="#home">Theodore Hu</a>
                 </div>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-weixin"></i></a>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                    <a href="#" class="social-link"><i class="ri-wechat-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="social-link"><i class="ri-github-line"></i></a>
+                </div>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2024 Theodore Hu | All Rights Reserved</p>
                 </div>
             </div>
         </div>
