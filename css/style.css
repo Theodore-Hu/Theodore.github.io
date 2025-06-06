@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Enhanced Base Styles & CSS Variables - 港风配色版
+   Enhanced Base Styles & CSS Variables
    ========================================================================== */
 :root {
     /* 港风主色调 */
@@ -7,39 +7,39 @@
     --color-primary-light: #dcc488;  /* 港风浅金 */
     --color-primary-dark: #a68b5b;   /* 港风深金 */
     --color-accent: #e74c3c;         /* 港风红色强调 */
-    
+  
     /* 港风配套色彩 */
     --color-secondary: #2c3e50;      /* 深蓝灰 - 更稳重 */
     --color-dark: #1a1a1a;          /* 深黑色 */
     --color-dark-light: #2d2d2d;    /* 浅黑色 */
     --color-light: #ffffff;         /* 纯白 */
-    
+  
     /* 港风灰色系 */
     --color-gray: #7f8c8d;          /* 中性灰 */
     --color-gray-light: #bdc3c7;    /* 浅灰 */
     --color-gray-dark: #34495e;     /* 深灰蓝 */
     --color-light-gray: #f8f9fa;    /* 极浅灰 */
-    
+  
     /* 港风边框和阴影 */
     --color-border: rgba(200, 170, 110, 0.2);       /* 金色边框 */
     --color-border-light: rgba(200, 170, 110, 0.1); /* 淡金色边框 */
-    
+  
     /* 港风功能色 */
     --color-success: #27ae60;       /* 翠绿色 */
     --color-warning: #f39c12;       /* 橙黄色 */
     --color-danger: #e74c3c;        /* 红色 */
-    
+  
     /* 字体 */
     --font-primary: 'Poppins', sans-serif;
     --font-secondary: 'Playfair Display', serif;
-    
+  
     /* 港风过渡和阴影 */
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     --shadow: 0 8px 32px rgba(200, 170, 110, 0.15);
     --shadow-dark: 0 10px 30px rgba(0, 0, 0, 0.3);
     --shadow-light: 0 5px 15px rgba(200, 170, 110, 0.1);
-    
+  
     --border-radius: 8px;
     --border-radius-large: 16px;
     --max-width: 1400px;
@@ -182,7 +182,7 @@ button, input, textarea {
     border-radius: 2px;
 }
 
-/* Enhanced Button Styles - 港风配色 */
+/* Enhanced Button Styles */
 .btn-primary, .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -203,8 +203,7 @@ button, input, textarea {
 .btn-primary {
     background: linear-gradient(45deg, var(--color-primary), var(--color-primary-light));
     color: var(--color-light);
-    box-shadow: 0 4px 15px rgba(200, 170, 110, 0.3);
-    border: 1px solid rgba(200, 170, 110, 0.2);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .btn-primary::before {
@@ -225,8 +224,7 @@ button, input, textarea {
 .btn-primary:hover {
     background: linear-gradient(45deg, var(--color-primary-dark), var(--color-primary));
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(200, 170, 110, 0.4);
-    border-color: var(--color-primary-light);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
 }
 
 .btn-secondary {
@@ -240,7 +238,6 @@ button, input, textarea {
     background: var(--color-primary);
     color: var(--color-light);
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(200, 170, 110, 0.3);
 }
 
 /* ==========================================================================
@@ -259,7 +256,7 @@ button, input, textarea {
 }
 
 /* ==========================================================================
-   Enhanced Navigation - 港风配色
+   Enhanced Navigation
    ========================================================================== */
 .main-nav {
     position: fixed;
@@ -409,8 +406,9 @@ button, input, textarea {
     color: white;
     transform: rotate(180deg);
 }
+
 /* ==========================================================================
-   Enhanced Hero Section - 港风配色
+   Enhanced Hero Section
    ========================================================================== */
 .hero-section {
     height: 100vh;
@@ -502,16 +500,10 @@ button, input, textarea {
     font-weight: 700;
     margin-bottom: 15px;
     letter-spacing: 3px;
-    background: linear-gradient(45deg, 
-        var(--color-light) 0%, 
-        var(--color-primary-light) 25%, 
-        var(--color-primary) 50%, 
-        var(--color-primary-light) 75%, 
-        var(--color-light) 100%);
+    background: linear-gradient(45deg, var(--color-light), var(--color-primary-light));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 2px 4px rgba(200, 170, 110, 0.3);
 }
 
 .hero-chinese-name {
@@ -520,7 +512,6 @@ button, input, textarea {
     color: var(--color-primary);
     margin-bottom: 30px;
     letter-spacing: 4px;
-    text-shadow: 0 2px 4px rgba(200, 170, 110, 0.2);
 }
 
 .hero-subtitle {
@@ -612,9 +603,8 @@ button, input, textarea {
     text-transform: uppercase;
     font-weight: 300;
 }
-
 /* ==========================================================================
-   Enhanced About Section - 港风配色
+   Enhanced About Section
    ========================================================================== */
 .about-container {
     display: grid;
@@ -750,16 +740,20 @@ button, input, textarea {
     padding: 25px;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transition: var(--transition);
 }
 
 .info-item:hover {
     border-color: var(--color-primary);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(200, 170, 110, 0.2);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .info-icon {
@@ -768,9 +762,7 @@ button, input, textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, 
-        rgba(200, 170, 110, 0.1), 
-        rgba(200, 170, 110, 0.2));
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.2));
     color: var(--color-primary);
     border-radius: 50%;
     font-size: 20px;
@@ -796,8 +788,9 @@ button, input, textarea {
     color: var(--color-gray);
     font-style: italic;
 }
+
 /* ==========================================================================
-   Enhanced Timeline / Experience Section - 港风配色
+   Enhanced Timeline / Experience Section
    ========================================================================== */
 .timeline {
     position: relative;
@@ -832,11 +825,11 @@ button, input, textarea {
     width: 25px;
     height: 25px;
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    border: 4px solid rgba(200, 170, 110, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.2);
     top: 30px;
     border-radius: 50%;
     z-index: 1;
-    box-shadow: 0 0 0 8px rgba(200, 170, 110, 0.1);
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0.1);
 }
 
 .left {
@@ -859,18 +852,16 @@ button, input, textarea {
     position: relative;
     padding: 30px;
     background: rgba(255, 255, 255, 0.08);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-large);
     backdrop-filter: blur(10px);
     transition: var(--transition);
-    box-shadow: var(--shadow);
 }
 
 .timeline-content:hover {
     background: rgba(255, 255, 255, 0.12);
     transform: translateY(-5px);
-    border-color: var(--color-primary);
-    box-shadow: 0 10px 30px rgba(200, 170, 110, 0.2);
+    box-shadow: var(--shadow-dark);
 }
 
 .timeline-badge {
@@ -888,15 +879,11 @@ button, input, textarea {
 }
 
 .timeline-badge.current {
-    background: linear-gradient(135deg, var(--color-success), #2ecc71);
+    background: linear-gradient(135deg, var(--color-success), #20c997);
 }
 
 .timeline-badge.education {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-}
-
-.timeline-badge.professional {
-    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
 }
 
 .timeline-badge.internship {
@@ -904,7 +891,7 @@ button, input, textarea {
 }
 
 .timeline-badge.leadership {
-    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    background: linear-gradient(135deg, #6f42c1, #5a2d91);
 }
 
 .timeline-badge.personal {
@@ -948,12 +935,12 @@ button, input, textarea {
 .skill-tag {
     display: inline-block;
     padding: 4px 12px;
-    background: rgba(200, 170, 110, 0.2);
-    color: var(--color-primary);
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--color-primary-light);
     border-radius: 15px;
     font-size: 0.8rem;
     margin: 2px 5px 2px 0;
-    border: 1px solid rgba(200, 170, 110, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .timeline-details {
@@ -1003,7 +990,7 @@ button, input, textarea {
 }
 
 /* ==========================================================================
-   Research Section - 港风配色
+   Research Section
    ========================================================================== */
 .research-container {
     max-width: 1000px;
@@ -1038,9 +1025,11 @@ button, input, textarea {
 .research-item {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--border-radius-large);
-    box-shadow: var(--shadow);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     padding: 40px;
     margin-bottom: 40px;
     transition: var(--transition);
@@ -1048,8 +1037,9 @@ button, input, textarea {
 
 .research-item:hover {
     transform: translateY(-5px);
-    border-color: var(--color-primary);
-    box-shadow: 0 10px 30px rgba(200, 170, 110, 0.2);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .research-header {
@@ -1216,15 +1206,13 @@ button, input, textarea {
 .tech-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, 
-        rgba(200, 170, 110, 0.1), 
-        rgba(200, 170, 110, 0.2));
-    color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 20px;
+    color: var(--color-light);
     font-size: 24px;
 }
 
@@ -1239,7 +1227,7 @@ button, input, textarea {
     margin: 0;
 }
 /* ==========================================================================
-   Achievements Section - 港风配色
+   Achievements Section
    ========================================================================== */
 .achievements-container {
     max-width: 1200px;
@@ -1275,20 +1263,18 @@ button, input, textarea {
 
 .award-item {
     background: rgba(255, 255, 255, 0.05);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius-large);
     padding: 30px;
     text-align: center;
     transition: var(--transition);
     backdrop-filter: blur(10px);
-    box-shadow: var(--shadow);
 }
 
 .award-item:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-5px);
-    border-color: var(--color-primary);
-    box-shadow: 0 10px 30px rgba(200, 170, 110, 0.2);
+    box-shadow: var(--shadow-dark);
 }
 
 .award-icon {
@@ -1370,12 +1356,12 @@ button, input, textarea {
 }
 
 .achievement-badge {
-    background: rgba(200, 170, 110, 0.2);
-    color: var(--color-primary);
+    background: rgba(59, 130, 246, 0.2);
+    color: var(--color-primary-light);
     padding: 5px 15px;
     border-radius: 15px;
     font-size: 0.8rem;
-    border: 1px solid rgba(200, 170, 110, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
 .project-description {
@@ -1386,7 +1372,7 @@ button, input, textarea {
 }
 
 /* ==========================================================================
-   Enhanced Skills Section - 港风配色
+   Enhanced Skills Section
    ========================================================================== */
 .skills-container {
     display: grid;
@@ -1399,17 +1385,20 @@ button, input, textarea {
 .skill-group {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 40px;
     border-radius: var(--border-radius-large);
-    box-shadow: var(--shadow);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
     transition: var(--transition);
 }
 
 .skill-group:hover {
     transform: translateY(-5px);
-    border-color: var(--color-primary);
-    box-shadow: 0 10px 30px rgba(200, 170, 110, 0.2);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .skill-title {
@@ -1467,21 +1456,18 @@ button, input, textarea {
     width: 0;
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    box-shadow: 0 2px 4px rgba(200, 170, 110, 0.2);
 }
 
 /* 确保技能条在激活时显示正确宽度 */
-.skill-group.active .skill-progress[data-width="95%"] { width: 95%; }
-.skill-group.active .skill-progress[data-width="90%"] { width: 90%; }
-.skill-group.active .skill-progress[data-width="85%"] { width: 85%; }
-.skill-group.active .skill-progress[data-width="92%"] { width: 92%; }
-.skill-group.active .skill-progress[data-width="88%"] { width: 88%; }
-.skill-group.active .skill-progress[data-width="75%"] { width: 75%; }
-.skill-group.active .skill-progress[data-width="100%"] { width: 100%; }
-.skill-group.active .skill-progress[data-width="70%"] { width: 70%; }
-.skill-group.active .skill-progress[data-width="25%"] { width: 25%; }
-.skill-group.active .skill-progress[data-width="80%"] { width: 80%; }
-.skill-group.active .skill-progress[data-width="65%"] { width: 65%; }
+.skill-group.active .skill-progress[data-width="95%"] { width: 95% !important; }
+.skill-group.active .skill-progress[data-width="90%"] { width: 90% !important; }
+.skill-group.active .skill-progress[data-width="85%"] { width: 85% !important; }
+.skill-group.active .skill-progress[data-width="92%"] { width: 92% !important; }
+.skill-group.active .skill-progress[data-width="75%"] { width: 75% !important; }
+.skill-group.active .skill-progress[data-width="100%"] { width: 100% !important; }
+.skill-group.active .skill-progress[data-width="70%"] { width: 70% !important; }
+.skill-group.active .skill-progress[data-width="25%"] { width: 25% !important; }
+.skill-group.active .skill-progress[data-width="88%"] { width: 88% !important; }
 
 .skill-progress::after {
     content: '';
@@ -1490,7 +1476,7 @@ button, input, textarea {
     right: 0;
     width: 20px;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(220, 196, 136, 0.4));
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3));
     animation: shimmer 2s infinite;
 }
 
@@ -1507,7 +1493,7 @@ button, input, textarea {
 }
 
 /* ==========================================================================
-   Enhanced Gallery Section - 港风配色
+   Enhanced Gallery Section
    ========================================================================== */
 .gallery-filter {
     display: flex;
@@ -1519,9 +1505,9 @@ button, input, textarea {
 
 .filter-btn {
     padding: 12px 25px;
-    background: rgba(200, 170, 110, 0.1);
-    border: 1px solid rgba(200, 170, 110, 0.2);
-    color: var(--color-primary-light);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-light);
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -1535,9 +1521,7 @@ button, input, textarea {
 .filter-btn.active {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
     border-color: var(--color-primary);
-    color: var(--color-light);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(200, 170, 110, 0.3);
 }
 
 .gallery-container {
@@ -1626,14 +1610,15 @@ button, input, textarea {
 
 .gallery-tag {
     padding: 4px 12px;
-    background: rgba(200, 170, 110, 0.3);
+    background: rgba(59, 130, 246, 0.3);
     color: var(--color-light);
     border-radius: 12px;
     font-size: 0.75rem;
-    border: 1px solid rgba(200, 170, 110, 0.5);
+    border: 1px solid rgba(59, 130, 246, 0.5);
 }
+
 /* ==========================================================================
-   Enhanced Contact Section - 港风配色
+   Enhanced Contact Section
    ========================================================================== */
 .contact-container {
     display: grid;
@@ -1677,9 +1662,7 @@ button, input, textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, 
-        rgba(200, 170, 110, 0.2), 
-        rgba(200, 170, 110, 0.3));
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.3));
     color: var(--color-primary);
     border-radius: 50%;
     font-size: 20px;
@@ -1708,10 +1691,12 @@ button, input, textarea {
 .contact-form-container {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(20px);
-    border: 1px solid var(--color-border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--border-radius-large);
     padding: 40px;
-    box-shadow: var(--shadow);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .form-header {
@@ -1754,7 +1739,7 @@ button, input, textarea {
     width: 100%;
     padding: 15px 45px 15px 15px;
     background: var(--color-light);
-    border: 1px solid rgba(200, 170, 110, 0.3);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     border-radius: var(--border-radius);
     color: var(--color-secondary);
     font-size: 15px;
@@ -1765,7 +1750,7 @@ button, input, textarea {
 .form-group textarea:focus {
     border-color: var(--color-primary);
     background: var(--color-light);
-    box-shadow: 0 0 0 3px rgba(200, 170, 110, 0.15);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 .form-group input::placeholder,
@@ -1808,7 +1793,7 @@ button, input, textarea {
 }
 
 /* ==========================================================================
-   完全居中的页脚布局 - 港风配色
+   完全居中的页脚布局
    ========================================================================== */
 .footer {
     background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-light) 100%);
@@ -1821,7 +1806,7 @@ button, input, textarea {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 30px;
-    text-align: center;
+    text-align: center; /* 整体居中 */
 }
 
 .footer-main {
@@ -1829,7 +1814,7 @@ button, input, textarea {
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 60px;
     margin-bottom: 50px;
-    justify-items: center;
+    justify-items: center; /* 网格项目居中 */
     text-align: center;
 }
 
@@ -1889,11 +1874,10 @@ button, input, textarea {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
     color: var(--color-light);
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(200, 170, 110, 0.3);
 }
 
 .footer-links {
-    display: contents;
+    display: contents; /* 让子元素直接参与网格布局 */
 }
 
 .footer-column {
@@ -1990,8 +1974,89 @@ button, input, textarea {
     margin: 0 3px;
 }
 
+/* 响应式页脚调整 */
+@media screen and (max-width: 1200px) {
+    .footer-main {
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+  
+    .footer-brand {
+        grid-column: 1 / -1; /* 品牌区域占满整行 */
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 60px 0 20px;
+    }
+  
+    .footer-content {
+        padding: 0 20px;
+    }
+  
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+  
+    .footer-brand {
+        grid-column: 1;
+        margin-bottom: 30px;
+    }
+  
+    .footer-bottom {
+        gap: 10px;
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        padding: 40px 0 20px;
+    }
+  
+    .footer-content {
+        padding: 0 15px;
+    }
+  
+    .footer-main {
+        gap: 25px;
+    }
+  
+    .footer-brand {
+        margin-bottom: 20px;
+    }
+  
+    .footer-logo a {
+        font-size: 1.5rem;
+    }
+  
+    .footer-subtitle {
+        font-size: 1rem;
+    }
+  
+    .footer-social {
+        gap: 10px;
+    }
+  
+    .social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
 /* ==========================================================================
-   Back to Top Button - 港风配色
+   Back to Top Button
    ========================================================================== */
 .back-to-top {
     position: fixed;
@@ -2010,7 +2075,7 @@ button, input, textarea {
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    box-shadow: 0 4px 15px rgba(200, 170, 110, 0.3);
+    box-shadow: var(--shadow-dark);
 }
 
 .back-to-top.show {
@@ -2021,10 +2086,10 @@ button, input, textarea {
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(200, 170, 110, 0.4);
+    box-shadow: 0 15px 35px rgba(59, 130, 246, 0.4);
 }
 /* ==========================================================================
-   移动端优化和响应式设计 - 港风配色
+   移动端优化和响应式设计
    ========================================================================== */
 /* 移动端触摸优化 */
 @media (max-width: 768px) {
@@ -2032,17 +2097,17 @@ button, input, textarea {
         min-height: 44px;
         padding: 12px 24px;
     }
-    
+  
     .gallery-item {
         height: 250px;
     }
-    
+  
     .contact-icon, .info-icon {
         width: 60px;
         height: 60px;
         font-size: 24px;
     }
-    
+  
     .theme-toggle {
         width: 44px;
         height: 44px;
@@ -2057,15 +2122,15 @@ button, input, textarea {
     .container {
         padding: 0 20px;
     }
-    
+  
     .nav-container {
         padding: 0 20px;
     }
-    
+  
     .about-container {
         gap: 60px;
     }
-    
+  
     .contact-container {
         gap: 60px;
     }
@@ -2075,70 +2140,70 @@ button, input, textarea {
     .section {
         padding: 80px 0;
     }
-    
+  
     .hero-content h1 {
         font-size: clamp(2.5rem, 6vw, 4rem);
     }
-    
+  
     .about-container {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+  
     .about-image {
         order: -1;
     }
-    
+  
     .about-stats {
         grid-template-columns: repeat(3, 1fr);
     }
-    
+  
     .about-info {
         grid-template-columns: 1fr;
         gap: 20px;
     }
-    
+  
     .skills-container {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+  
     .contact-container {
         grid-template-columns: 1fr;
         gap: 50px;
     }
-    
+  
     .footer-main {
         grid-template-columns: repeat(2, 1fr);
         gap: 40px;
     }
-    
+  
     .footer-links {
         grid-template-columns: 1fr 1fr;
         gap: 30px;
     }
-    
+  
     .gallery-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+  
     .awards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+  
     .methodology-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+  
     .tech-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+  
     .project-highlight {
         flex-direction: column;
         text-align: center;
     }
-    
+  
     .project-icon {
         align-self: center;
     }
@@ -2148,60 +2213,60 @@ button, input, textarea {
     .section {
         padding: 60px 0;
     }
-    
+  
     .section-header {
         margin-bottom: 50px;
     }
-    
+  
     .hero-section {
         min-height: 600px;
     }
-    
+  
     .hero-cta {
         flex-direction: column;
         align-items: center;
     }
-    
+  
     .hero-tags {
         justify-content: center;
     }
-    
+  
     .tag {
         font-size: 12px;
         padding: 6px 15px;
     }
-    
+  
     /* Timeline adjustments */
     .timeline::after {
         left: 20px;
     }
-    
+  
     .timeline-container {
         width: 100%;
         padding-left: 60px;
         padding-right: 20px;
     }
-    
+  
     .timeline-container.right {
         left: 0;
     }
-    
+  
     .left::after, 
     .right::after {
         left: 8px;
     }
-    
+  
     .timeline-badge {
         right: auto;
         left: 20px;
         top: 20px;
     }
-    
+  
     /* Navigation mobile */
     .nav-toggle {
         display: block;
     }
-    
+  
     .nav-links {
         position: fixed;
         top: 0;
@@ -2218,54 +2283,54 @@ button, input, textarea {
         transition: var(--transition);
         z-index: 999;
     }
-    
+  
     .nav-links.active {
         right: 0;
     }
-    
+  
     .nav-link {
         font-size: 16px;
         padding: 15px 0;
     }
-    
+  
     .theme-toggle {
         margin-left: 0;
         margin-top: 20px;
     }
-    
+  
     .gallery-container {
         grid-template-columns: 1fr;
     }
-    
+  
     .awards-grid {
         grid-template-columns: 1fr;
     }
-    
+  
     .methodology-grid {
         grid-template-columns: 1fr;
     }
-    
+  
     .tech-grid {
         grid-template-columns: 1fr;
     }
-    
+  
     .footer-main {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-    
+  
     .footer-links {
         grid-template-columns: 1fr;
         gap: 25px;
         text-align: center;
     }
-    
+  
     .footer-bottom {
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
-    
+  
     .footer-credit {
         text-align: center;
     }
@@ -2275,66 +2340,66 @@ button, input, textarea {
     .container {
         padding: 0 15px;
     }
-    
+  
     .nav-container {
         padding: 0 15px;
     }
-    
+  
     .hero-content {
         padding: 0 15px;
     }
-    
+  
     .hero-name {
         font-size: clamp(2rem, 8vw, 3rem);
     }
-    
+  
     .hero-chinese-name {
         font-size: clamp(1.2rem, 6vw, 1.8rem);
     }
-    
+  
     .section-title {
         font-size: clamp(2rem, 8vw, 2.5rem);
     }
-    
+  
     .about-stats {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+  
     .form-row {
         grid-template-columns: 1fr;
     }
-    
+  
     .timeline-container {
         padding-left: 50px;
     }
-    
+  
     .timeline-content {
         padding: 20px;
     }
-    
+  
     .research-item {
         padding: 25px;
     }
-    
+  
     .research-header {
         flex-direction: column;
         text-align: center;
         gap: 15px;
     }
-    
+  
     .skill-group {
         padding: 25px;
     }
-    
+  
     .skills-container {
         grid-template-columns: 1fr;
     }
-    
+  
     .contact-form-container {
         padding: 25px;
     }
-    
+  
     .back-to-top {
         bottom: 20px;
         right: 20px;
@@ -2344,86 +2409,6 @@ button, input, textarea {
     }
 }
 
-/* 响应式页脚调整 */
-@media screen and (max-width: 1200px) {
-    .footer-main {
-        gap: 40px;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .footer-main {
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-    }
-    
-    .footer-brand {
-        grid-column: 1 / -1;
-        margin-bottom: 20px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .footer {
-        padding: 60px 0 20px;
-    }
-    
-    .footer-content {
-        padding: 0 20px;
-    }
-    
-    .footer-main {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .footer-brand {
-        grid-column: 1;
-        margin-bottom: 30px;
-    }
-    
-    .footer-bottom {
-        gap: 10px;
-        padding-top: 20px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .footer {
-        padding: 40px 0 20px;
-    }
-    
-    .footer-content {
-        padding: 0 15px;
-    }
-    
-    .footer-main {
-        gap: 25px;
-    }
-    
-    .footer-brand {
-        margin-bottom: 20px;
-    }
-    
-    .footer-logo a {
-        font-size: 1.5rem;
-    }
-    
-    .footer-subtitle {
-        font-size: 1rem;
-    }
-    
-    .footer-social {
-        gap: 10px;
-    }
-    
-    .social-link {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-}
 /* ==========================================================================
    打印样式
    ========================================================================== */
@@ -2437,28 +2422,28 @@ button, input, textarea {
     .footer {
         display: none !important;
     }
-    
+  
     .section {
         padding: 40px 0;
         page-break-inside: avoid;
     }
-    
+  
     .timeline-container {
         page-break-inside: avoid;
     }
-    
+  
     body {
         font-size: 12pt;
         line-height: 1.4;
         color: #000;
         background: #fff;
     }
-    
+  
     .section-title {
         font-size: 18pt;
         margin-bottom: 15px;
     }
-    
+  
     .dark-section {
         background: #fff;
         color: #000;
@@ -2476,15 +2461,15 @@ button, input, textarea {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
+  
     .hero-bg {
         animation: none;
     }
-    
+  
     .hero-particles {
         animation: none;
     }
-    
+  
     .scroll-arrow {
         animation: none;
     }
@@ -2502,7 +2487,7 @@ textarea:focus {
 /* High contrast mode support */
 @media (prefers-contrast: high) {
     :root {
-        --color-primary: #c8aa6e;
+        --color-primary: #0066ff;
         --color-secondary: #000000;
         --color-light: #ffffff;
         --color-dark: #000000;
@@ -2591,7 +2576,7 @@ textarea:focus {
     }
 }
 
-/* 自定义滚动条 - 港风配色 */
+/* 自定义滚动条 */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -2615,14 +2600,14 @@ textarea:focus {
     scrollbar-color: var(--color-primary) var(--color-light-gray);
 }
 
-/* 选择文本的样式 - 港风配色 */
+/* 选择文本的样式 */
 ::selection {
-    background: rgba(200, 170, 110, 0.3);
+    background: rgba(59, 130, 246, 0.2);
     color: var(--color-secondary);
 }
 
 ::-moz-selection {
-    background: rgba(200, 170, 110, 0.3);
+    background: rgba(59, 130, 246, 0.2);
     color: var(--color-secondary);
 }
 
@@ -2669,168 +2654,263 @@ textarea:focus {
 }
 
 /* ==========================================================================
-   港风特色样式最终增强
+   港风特色样式增强
    ========================================================================== */
 
-/* 强制覆盖所有可能残留的蓝色样式 */
-*[style*="59, 130, 246"],
-*[style*="#3b82f6"],
-*[style*="rgb(59, 130, 246)"],
-*[style*="rgba(59, 130, 246"] {
-    color: var(--color-primary) !important;
-    background-color: rgba(200, 170, 110, 0.15) !important;
-    border-color: var(--color-primary) !important;
-    box-shadow: 0 4px 8px rgba(200, 170, 110, 0.2) !important;
+/* 港风按钮样式 */
+.btn-primary {
+    background: linear-gradient(45deg, var(--color-primary), var(--color-primary-light));
+    color: var(--color-light);
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(200, 170, 110, 0.3);
+    border: 1px solid rgba(200, 170, 110, 0.2);
+    position: relative;
+    overflow: hidden;
 }
 
-/* 确保所有按钮使用港风配色 */
-.btn-primary,
-button[type="submit"],
-input[type="submit"] {
-    background: linear-gradient(45deg, var(--color-primary), var(--color-primary-light)) !important;
-    border-color: var(--color-primary) !important;
-    box-shadow: 0 4px 15px rgba(200, 170, 110, 0.3) !important;
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
 }
 
-.btn-primary:hover,
-button[type="submit"]:hover,
-input[type="submit"]:hover {
-    background: linear-gradient(45deg, var(--color-primary-dark), var(--color-primary)) !important;
-    box-shadow: 0 6px 20px rgba(200, 170, 110, 0.4) !important;
+.btn-primary:hover::before {
+    left: 100%;
 }
 
-/* 确保所有链接使用港风配色 */
-a {
-    color: var(--color-primary) !important;
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--color-primary-dark), var(--color-primary));
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(200, 170, 110, 0.4);
+    border-color: var(--color-primary-light);
 }
 
-a:hover {
-    color: var(--color-primary-dark) !important;
+.btn-secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 50px;
 }
 
-/* 确保所有图标使用港风配色 */
-.info-icon,
-.contact-icon,
-.research-icon,
-.tech-icon,
-.award-icon {
-    background: linear-gradient(135deg, 
-        rgba(200, 170, 110, 0.1), 
-        rgba(200, 170, 110, 0.2)) !important;
-    color: var(--color-primary) !important;
+.btn-secondary:hover {
+    background: var(--color-primary);
+    color: var(--color-light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(200, 170, 110, 0.3);
 }
 
-/* 确保进度条使用港风配色 */
-.skill-progress {
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light)) !important;
-}
-
-/* 确保所有边框使用港风配色 */
-.timeline-content,
-.research-item,
-.skill-group,
-.award-item,
-.contact-form-container,
-.info-item {
-    border-color: var(--color-border) !important;
-}
-
-.timeline-content:hover,
-.research-item:hover,
-.skill-group:hover,
-.award-item:hover,
-.info-item:hover {
-    border-color: var(--color-primary) !important;
-    box-shadow: 0 10px 30px rgba(200, 170, 110, 0.2) !important;
-}
-
-/* 确保标签使用港风配色 */
-.tag,
-.skill-tag,
-.achievement-badge,
-.gallery-tag {
-    background: rgba(200, 170, 110, 0.2) !important;
-    color: var(--color-primary) !important;
-    border: 1px solid rgba(200, 170, 110, 0.3) !important;
-}
-
-/* 确保过滤按钮使用港风配色 */
-.filter-btn {
-    background: rgba(200, 170, 110, 0.1) !important;
-    border: 1px solid rgba(200, 170, 110, 0.2) !important;
-    color: var(--color-primary-light) !important;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)) !important;
-    border-color: var(--color-primary) !important;
-    color: var(--color-light) !important;
-}
-
-/* 确保表单元素使用港风配色 */
-.form-group input:focus,
-.form-group textarea:focus {
-    border-color: var(--color-primary) !important;
-    box-shadow: 0 0 0 3px rgba(200, 170, 110, 0.15) !important;
-}
-
-.form-icon {
-    color: var(--color-primary) !important;
-}
-
-/* 确保社交链接使用港风配色 */
-.social-link:hover {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)) !important;
-    box-shadow: 0 4px 12px rgba(200, 170, 110, 0.3) !important;
-}
-
-/* 确保返回顶部按钮使用港风配色 */
-.back-to-top {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)) !important;
-    box-shadow: 0 4px 15px rgba(200, 170, 110, 0.3) !important;
-}
-
-.back-to-top:hover {
-    box-shadow: 0 6px 20px rgba(200, 170, 110, 0.4) !important;
-}
-
-/* 最终确保英雄区域名字使用港风配色 */
-.hero-chinese-name {
-    color: var(--color-primary) !important;
-    text-shadow: 0 2px 4px rgba(200, 170, 110, 0.2) !important;
-}
-
+/* 港风英雄区域 */
 .hero-name {
     background: linear-gradient(45deg, 
         var(--color-light) 0%, 
         var(--color-primary-light) 25%, 
         var(--color-primary) 50%, 
         var(--color-primary-light) 75%, 
-        var(--color-light) 100%) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
+        var(--color-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 2px 4px rgba(200, 170, 110, 0.3);
 }
 
-/* 确保时间线使用港风配色 */
-.timeline::after {
-    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-light)) !important;
+.hero-chinese-name {
+    color: var(--color-primary);
+    text-shadow: 0 2px 4px rgba(200, 170, 110, 0.2);
 }
 
-.timeline-container::after {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)) !important;
-    border-color: rgba(200, 170, 110, 0.2) !important;
-    box-shadow: 0 0 0 8px rgba(200, 170, 110, 0.1) !important;
+/* 港风标签 */
+.tag {
+    background: rgba(200, 170, 110, 0.15);
+    border: 1px solid rgba(200, 170, 110, 0.3);
+    color: var(--color-primary-light);
+    backdrop-filter: blur(10px);
 }
 
-/* 确保导航链接使用港风配色 */
+.tag:hover {
+    background: rgba(200, 170, 110, 0.25);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(200, 170, 110, 0.2);
+}
+
+/* 港风技能条 */
+.skill-progress {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
+    position: relative;
+    box-shadow: 0 2px 4px rgba(200, 170, 110, 0.2);
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4));
+    animation: shimmer 2s infinite;
+}
+
+/* 港风导航 */
 .nav-link::after {
-    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light)) !important;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-primary-light));
 }
 
 .nav-link:hover {
-    color: var(--color-primary-light) !important;
+    color: var(--color-primary-light);
 }
 
-/* 完毕！这是完整的港风配色CSS代码 */
+/* 港风卡片样式 */
+.timeline-content,
+.research-item,
+.skill-group,
+.award-item,
+.contact-form-container {
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow);
+}
+
+.timeline-content:hover,
+.research-item:hover,
+.skill-group:hover,
+.award-item:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px rgba(200, 170, 110, 0.2);
+}
+
+/* 港风时间线 */
+.timeline::after {
+    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-light));
+}
+
+.timeline-container::after {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border: 4px solid rgba(200, 170, 110, 0.2);
+    box-shadow: 0 0 0 8px rgba(200, 170, 110, 0.1);
+}
+
+/* 港风画廊过滤按钮 */
+.filter-btn {
+    background: rgba(200, 170, 110, 0.1);
+    border: 1px solid rgba(200, 170, 110, 0.2);
+    color: var(--color-primary-light);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-color: var(--color-primary);
+    color: var(--color-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(200, 170, 110, 0.3);
+}
+
+/* 港风表单样式 */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(200, 170, 110, 0.15);
+}
+
+.form-icon {
+    color: var(--color-primary);
+}
+
+/* 港风社交链接 */
+.social-link:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    color: var(--color-light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(200, 170, 110, 0.3);
+}
+
+/* 港风返回顶部按钮 */
+.back-to-top {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    box-shadow: 0 4px 15px rgba(200, 170, 110, 0.3);
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(200, 170, 110, 0.4);
+}
+
+/* 港风滚动条 */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--color-primary), var(--color-primary-light));
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+* {
+    scrollbar-color: var(--color-primary) var(--color-light-gray);
+}
+
+/* 港风选择文本 */
+::selection {
+    background: rgba(200, 170, 110, 0.3);
+    color: var(--color-secondary);
+}
+
+::-moz-selection {
+    background: rgba(200, 170, 110, 0.3);
+    color: var(--color-secondary);
+}
+
+/* 港风链接悬停效果 */
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+/* 港风图标样式 */
+.research-icon,
+.tech-icon,
+.award-icon,
+.contact-icon,
+.info-icon {
+    background: linear-gradient(135deg, 
+        rgba(200, 170, 110, 0.1), 
+        rgba(200, 170, 110, 0.2));
+    color: var(--color-primary);
+}
+
+/* 港风徽章样式 */
+.timeline-badge.current {
+    background: linear-gradient(135deg, var(--color-success), #2ecc71);
+}
+
+.timeline-badge.education {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+}
+
+.timeline-badge.professional {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+}
+
+.timeline-badge.leadership {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+}
+
+.achievement-badge {
+    background: rgba(200, 170, 110, 0.2);
+    color: var(--color-primary);
+    border: 1px solid rgba(200, 170, 110, 0.3);
+}
+
+.skill-tag {
+    background: rgba(200, 170, 110, 0.2);
+    color: var(--color-primary);
+    border: 1px solid rgba(200, 170, 110, 0.3);
+}
+
+.gallery-tag {
+    background: rgba(200, 170, 110, 0.3);
+    border: 1px solid rgba(200, 170, 110, 0.5);
+}
