@@ -45,73 +45,73 @@
     
     <!-- Preloader -->
     <style>
-    .preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        transition: opacity 0.8s ease, visibility 0.8s ease;
-    }
-    
-    .preloader-logo {
-        font-family: 'Playfair Display', serif;
-        color: #ffffff;
-        font-size: 1.8rem;
-        font-weight: 400;
-        letter-spacing: 0.8rem;
-        margin-bottom: 2rem;
-        opacity: 0;
-        animation: fadeIn 1s ease forwards 0.5s;
-        text-align: center;
-    }
-    
-    .preloader-subtitle {
-        font-family: 'Poppins', sans-serif;
-        color: #c8aa6e;  /* 改为港风金色 */
-        font-size: 0.9rem;
-        font-weight: 300;
-        letter-spacing: 0.2rem;
-        margin-bottom: 3rem;
-        opacity: 0;
-        animation: fadeIn 1s ease forwards 0.8s;
-    }
-    
-    .preloader-bar {
-        width: 200px;
-        height: 2px;
-        background-color: rgba(255, 255, 255, 0.1);
-        position: relative;
-        overflow: hidden;
-        border-radius: 1px;
-    }
-    
-    .preloader-progress {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 0;
-        background: linear-gradient(90deg, #c8aa6e, #dcc488);  /* 改为港风金色渐变 */
-        animation: progress 2.5s ease forwards;
-        border-radius: 1px;
-    }
-    
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    
-    @keyframes progress {
-        from { width: 0; }
-        to { width: 100%; }
-    }
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        
+        .preloader-logo {
+            font-family: 'Playfair Display', serif;
+            color: #ffffff;
+            font-size: 1.8rem;
+            font-weight: 400;
+            letter-spacing: 0.8rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.5s;
+            text-align: center;
+        }
+        
+        .preloader-subtitle {
+            font-family: 'Poppins', sans-serif;
+            color: #3b82f6;
+            font-size: 0.9rem;
+            font-weight: 300;
+            letter-spacing: 0.2rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.8s;
+        }
+        
+        .preloader-bar {
+            width: 200px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            border-radius: 1px;
+        }
+        
+        .preloader-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            animation: progress 2.5s ease forwards;
+            border-radius: 1px;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes progress {
+            from { width: 0; }
+            to { width: 100%; }
+        }
     </style>
 </head>
 <body data-theme="light">
@@ -225,7 +225,7 @@
                         <p class="lead-text">A dedicated professional combining technical expertise with leadership excellence</p>
                     </div>
                     <div class="about-text">
-                        <p class="fade-in">I'm Theodore Hu (胡云韬), a civil engineer currently working at China State Construction Engineering (Hong Kong) Ltd., where I joined through the prestigious "Maritime Talents" recruitment program after completing my Master's  in Harbor, Coastal and Offshore Engineering at Ocean University of China.</p>
+                        <p class="fade-in">I'm Theodore Hu (胡云韬), a civil engineer currently working at China State Construction Engineering (Hong Kong) Ltd., where I joined through the prestigious "Maritime Talents" recruitment program after completing my Master's degree in Harbor, Coastal and Offshore Engineering at Ocean University of China.</p>
                         
                         <p class="fade-in">With a strong academic foundation (GPA: 3.68/4.0, ranked 5th out of 26 in my program), I bring both theoretical knowledge and practical experience to complex engineering challenges. My research in multiphase flow analysis has been published in the EI Journal "Engineering Mechanics," and I have a second SCI paper currently under review.</p>
                         
@@ -303,14 +303,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- Academic Experience -->
+                <!-- Master's Degree -->
                 <div class="timeline-container right">
                     <div class="timeline-content">
                         <div class="timeline-badge education">
                             <i class="ri-graduation-cap-line"></i>
                         </div>
                         <h3 class="timeline-year">2022 - 2025</h3>
-                        <h4 class="timeline-title">Master's </h4>
+                        <h4 class="timeline-title">Master's Degree</h4>
                         <h5 class="timeline-company">Ocean University of China - Harbor, Coastal and Offshore Engineering</h5>
                         <p><strong>GPA: 3.68/4.0 (Ranked 5th/26)</strong><br>
                         Conducted advanced research on multiphase flow analysis in subsea pipelines. Published research in EI Journal "Engineering Mechanics" with a second SCI paper under review. Specialized in fluid dynamics simulation and offshore engineering technologies.</p>
@@ -372,16 +372,16 @@
                         </div>
                     </div>
                 </div>
-                <!-- University Experience -->
+                <!-- Bachelor's Degree -->
                 <div class="timeline-container right">
                     <div class="timeline-content">
                         <div class="timeline-badge education">
                             <i class="ri-graduation-cap-line"></i>
                         </div>
-                        <h3 class="timeline-year">2017 - 2025</h3>
+                        <h3 class="timeline-year">2017 - 2021</h3>
                         <h4 class="timeline-title">Studenthood</h4>
                         <h5 class="timeline-company">Ocean University of China - Harbor, Channel, and Coastal Engineering</h5>
-                        <p>Earned almost all available scholarships and awards during student years. Developed a strong foundation in civil engineering principles, coastal engineering, and project management.</p>
+                        <p>Earned almost all available scholarships and awards during university years. Developed a strong foundation in civil engineering principles, coastal engineering, and project management.</p>
                         <div class="timeline-achievements">
                             <p><i class="ri-award-line"></i> Received nearly all available university scholarships</p>
                             <p><i class="ri-medal-line"></i> Multiple academic excellence awards</p>
