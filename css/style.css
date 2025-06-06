@@ -452,8 +452,8 @@ button, input, textarea {
     width: 100%;
     height: 100%;
     background-image: 
-        radial-gradient(2px 2px at 20px 30px, rgba(59, 130, 246, 0.3), transparent),
-        radial-gradient(2px 2px at 40px 70px, rgba(59, 130, 246, 0.2), transparent),
+        radial-gradient(2px 2px at 20px 30px, rgba(200, 170, 110, 0.3), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(200, 170, 110, 0.2), transparent),
         radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.1), transparent);
     background-repeat: repeat;
     background-size: 200px 100px;
@@ -544,8 +544,8 @@ button, input, textarea {
 .tag {
     font-size: 13px;
     padding: 8px 20px;
-    background: rgba(59, 130, 246, 0.1);
-    border: 1px solid rgba(59, 130, 246, 0.3);
+    background: rgba(200, 170, 110, 0.15);
+    border: 1px solid rgba(200, 170, 110, 0.3);
     border-radius: 25px;
     color: var(--color-primary-light);
     letter-spacing: 1px;
@@ -554,9 +554,10 @@ button, input, textarea {
 }
 
 .tag:hover {
-    background: rgba(59, 130, 246, 0.2);
+    background: rgba(200, 170, 110, 0.25);
     border-color: var(--color-primary);
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(200, 170, 110, 0.2);
 }
 
 .hero-cta {
