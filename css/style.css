@@ -1845,6 +1845,12 @@ button, input, textarea {
     margin: 0 3px;
 }
 
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
 /* Footer responsive fixes - 确保这些规则存在且正确 */
 @media screen and (max-width: 1200px) {
     .footer-main {
@@ -1898,6 +1904,19 @@ button, input, textarea {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .footer-links {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        text-align: center;
+    }
+}
 
 /* ==========================================================================
    Back to Top Button
