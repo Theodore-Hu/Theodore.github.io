@@ -1533,7 +1533,7 @@ button, input, textarea {
 }
 
 /* ==========================================================================
-   Enhanced Contact Section
+   Enhanced Contact Section - 修复版本
    ========================================================================== */
 .contact-container {
     display: grid;
@@ -1548,13 +1548,13 @@ button, input, textarea {
 }
 
 .contact-intro h3 {
-    color: var(--color-light);
+    color: var(--color-secondary);
     font-size: 1.8rem;
     margin-bottom: 20px;
 }
 
 .contact-intro p {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--color-gray-dark);
     font-size: 1.1rem;
     line-height: 1.7;
 }
@@ -1585,20 +1585,20 @@ button, input, textarea {
 }
 
 .contact-text h4 {
-    color: var(--color-light);
+    color: var(--color-secondary);
     margin-bottom: 8px;
     font-size: 1.1rem;
 }
 
 .contact-text p {
-    color: var(--color-primary-light);
+    color: var(--color-primary);
     font-size: 1rem;
     margin-bottom: 5px;
     font-weight: 500;
 }
 
 .contact-sub {
-    color: rgba(255, 255, 255, 0.6);
+    color: var(--color-gray);
     font-size: 0.85rem;
     font-style: italic;
 }
@@ -1703,51 +1703,6 @@ button, input, textarea {
 
 .form-status.error {
     color: var(--color-danger);
-}
-
-/* Contact Section Responsive Design */
-@media screen and (max-width: 991px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 60px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .contact-container {
-        gap: 40px;
-    }
-    
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-    
-    .contact-form-container {
-        padding: 30px;
-    }
-    
-    .contact-details {
-        gap: 25px;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .contact-container {
-        gap: 30px;
-    }
-    
-    .contact-form-container {
-        padding: 25px;
-    }
-    
-    .contact-intro h3 {
-        font-size: 1.5rem;
-    }
-    
-    .contact-intro p {
-        font-size: 1rem;
-    }
 }
 
 /* ==========================================================================
@@ -1890,17 +1845,17 @@ button, input, textarea {
     margin: 0 3px;
 }
 
-/* Footer responsive fixes - 添加到footer部分的最后 */
+/* Footer responsive fixes - 确保这些规则存在且正确 */
 @media screen and (max-width: 1200px) {
     .footer-main {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr !important;
         gap: 40px;
     }
 }
 
 @media screen and (max-width: 991px) {
     .footer-main {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr !important;
         gap: 40px;
     }
     
@@ -1914,7 +1869,7 @@ button, input, textarea {
 
 @media screen and (max-width: 768px) {
     .footer-main {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
         gap: 30px;
         text-align: center;
     }
@@ -1940,20 +1895,6 @@ button, input, textarea {
     
     .footer-credit {
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .footer {
-        padding: 60px 0 20px;
-    }
-    
-    .footer-content {
-        padding: 0 15px;
-    }
-    
-    .footer-main {
-        gap: 25px;
     }
 }
 
