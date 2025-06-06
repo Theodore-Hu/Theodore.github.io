@@ -1594,11 +1594,11 @@ button, input, textarea {
 }
 
 .contact-form-container {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(184, 157, 100, 0.2);
     border-radius: var(--border-radius-large);
     padding: 40px;
-    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
 }
 
 .form-header {
@@ -1633,17 +1633,17 @@ button, input, textarea {
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 8px;
-    color: var(--color-light);
+    color: var(--color-secondary);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 15px 45px 15px 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--color-light);
+    border: 1px solid rgba(184, 157, 100, 0.3);
     border-radius: var(--border-radius);
-    color: var(--color-light);
+    color: var(--color-secondary);
     font-size: 15px;
     transition: var(--transition);
 }
@@ -2249,3 +2249,26 @@ textarea:focus {
     to { transform: rotate(360deg); }
 }
 
+/* Footer responsive fixes */
+@media screen and (max-width: 991px) {
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        max-width: none;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+}
