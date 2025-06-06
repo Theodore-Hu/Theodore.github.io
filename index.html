@@ -5,21 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Theodore Hu (胡云韬) - Harbor, Coastal and Offshore Engineering Master | Project Engineer at China State Construction Engineering (Hong Kong) Ltd.">
     <meta name="keywords" content="Theodore Hu, 胡云韬, Civil Engineer, Ocean University of China, Hong Kong, Project Management">
-    <meta name="theme-color" content="#121212">
+    <meta name="theme-color" content="#3b82f6">
     <meta property="og:title" content="Theodore Hu | Civil Engineer & Project Manager">
     <meta property="og:description" content="专业土木工程师，中国海洋大学硕士，现任中建香港工程师">
     <meta property="og:type" content="website">
-    <!-- 新添加的预加载代码 -->
+    
+    <!-- 性能优化预加载 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="canonical" href="https://yourwebsite.com">
+    <meta name="author" content="Theodore Hu">
+    <meta name="robots" content="index, follow">
+    
     <title>Theodore Hu (胡云韬) | Personal Portfolio</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
     <link rel="stylesheet" href="css/style.css">
+    
+    <!-- 结构化数据 -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Theodore Hu",
+      "alternateName": "胡云韬",
+      "jobTitle": "Civil Engineer & Project Manager",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "China State Construction Engineering (Hong Kong) Ltd."
+      },
+      "alumniOf": "Ocean University of China",
+      "url": "https://yourwebsite.com"
+    }
+    </script>
     
     <!-- Preloader -->
     <style>
@@ -52,7 +74,7 @@
         
         .preloader-subtitle {
             font-family: 'Poppins', sans-serif;
-            color: #b89d64;
+            color: #3b82f6;
             font-size: 0.9rem;
             font-weight: 300;
             letter-spacing: 0.2rem;
@@ -76,7 +98,7 @@
             left: 0;
             height: 100%;
             width: 0;
-            background: linear-gradient(90deg, #b89d64, #d4af37);
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
             animation: progress 2.5s ease forwards;
             border-radius: 1px;
         }
@@ -92,7 +114,7 @@
         }
     </style>
 </head>
-<body>
+<body data-theme="light">
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-logo">THEODORE HU</div>
@@ -101,7 +123,7 @@
             <div class="preloader-progress"></div>
         </div>
     </div>
-
+    
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
@@ -119,10 +141,11 @@
                 <li><a href="#achievements" class="nav-link">Achievements</a></li>
                 <li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">🌙</button></li>
             </ul>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="hero-bg">
@@ -162,7 +185,7 @@
             <span>Scroll Down</span>
         </div>
     </section>
-
+    
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
@@ -175,7 +198,10 @@
             <div class="about-container">
                 <div class="about-image">
                     <div class="image-frame">
-                        <img src="images/bc2d52c9b189287cd2e59d1aefb2925.png" alt="Theodore Hu Portrait">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='500'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="images/bc2d52c9b189287cd2e59d1aefb2925.png" 
+                             alt="Theodore Hu Portrait" 
+                             class="lazy-image">
                         <div class="image-decoration"></div>
                     </div>
                     <div class="about-stats">
@@ -249,7 +275,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Experience Section -->
     <section id="experience" class="section dark-section">
         <div class="container">
@@ -277,7 +303,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Master's Degree -->
                 <div class="timeline-container right">
                     <div class="timeline-content">
@@ -301,7 +326,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- International Business Experience -->
                 <div class="timeline-container left">
                     <div class="timeline-content">
@@ -318,7 +342,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Engineering Assistant -->
                 <div class="timeline-container right">
                     <div class="timeline-content">
@@ -331,7 +354,6 @@
                         <p>Participated in safety inspections, compiled construction logs, and organized project documentation. Gained hands-on experience in construction site management and quality control procedures.</p>
                     </div>
                 </div>
-
                 <!-- Leadership Experience -->
                 <div class="timeline-container left">
                     <div class="timeline-content">
@@ -350,7 +372,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Bachelor's Degree -->
                 <div class="timeline-container right">
                     <div class="timeline-content">
@@ -367,7 +388,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Piano Teaching -->
                 <div class="timeline-container left">
                     <div class="timeline-content">
@@ -398,7 +418,6 @@
                     <h3>Research Focus</h3>
                     <p>My research centers on multiphase flow analysis in subsea pipelines, with applications in both offshore oil & gas operations and deep-sea mining. This work addresses critical challenges in fluid dynamics, pipeline design optimization, and offshore engineering safety.</p>
                 </div>
-
                 <div class="research-projects">
                     <div class="research-item fade-in">
                         <div class="research-header">
@@ -422,7 +441,6 @@
                                 <li><strong>Deep-Sea Polymetallic Nodule Project:</strong> "Key Core Technologies for Deep-Sea Mining - Ultra-Deep Water Coarse Particle Mineral Safe Transportation Technology" (Special Project 5, Topic 5.2)</li>
                                 <li><strong>Industry Application:</strong> Research findings directly applicable to China Merchants Group's maritime engineering and offshore construction projects</li>
                             </ul>
-
                             
                             <h5>Technical Methodology</h5>
                             <div class="methodology-grid">
@@ -475,7 +493,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="research-skills fade-in">
                     <h3>Research Technologies & Tools</h3>
                     <div class="tech-grid">
@@ -526,6 +543,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Achievements Section -->
     <section id="achievements" class="section dark-section">
         <div class="container">
@@ -566,7 +584,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Leadership Awards -->
                 <div class="achievement-category fade-in">
                     <h3 class="category-title">
@@ -597,7 +614,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Competition Results -->
                 <div class="achievement-category fade-in">
                     <h3 class="category-title">
@@ -628,7 +644,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- Professional Projects -->
                 <div class="achievement-category fade-in">
                     <h3 class="category-title">
@@ -672,7 +687,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
@@ -885,7 +900,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Gallery Section -->
     <section id="gallery" class="section dark-section">
         <div class="container">
@@ -922,10 +937,13 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="gallery-item academic" data-category="academic">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Research Laboratory" loading="lazy">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Research Laboratory" 
+                             class="lazy-image">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h3>Fluid Dynamics Research</h3>
@@ -938,10 +956,13 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="gallery-item personal" data-category="personal">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Piano Performance" loading="lazy">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Piano Performance" 
+                             class="lazy-image">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h3>Piano Recital Performance</h3>
@@ -954,10 +975,13 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="gallery-item leadership" data-category="leadership">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team Leadership" loading="lazy">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Team Leadership" 
+                             class="lazy-image">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h3>Alumni Association Leadership</h3>
@@ -970,10 +994,13 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="gallery-item academic" data-category="academic">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="University Campus" loading="lazy">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="University Campus" 
+                             class="lazy-image">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h3>Campus Academic Life</h3>
@@ -986,10 +1013,13 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="gallery-item personal" data-category="personal">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Basketball Championship" loading="lazy">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Basketball Championship" 
+                             class="lazy-image">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h3>Basketball Championship</h3>
@@ -1002,10 +1032,13 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="gallery-item professional" data-category="professional">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="International Business" loading="lazy">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="International Business" 
+                             class="lazy-image">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h3>International Trade Operations</h3>
@@ -1018,10 +1051,13 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="gallery-item leadership" data-category="leadership">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Alumni Interview Project" loading="lazy">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Alumni Interview Project" 
+                             class="lazy-image">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h3>Alumni Interview Project</h3>
@@ -1034,10 +1070,13 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="gallery-item personal" data-category="personal">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Business Networking" loading="lazy">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='600'%3E%3Crect width='100%25' height='100%25' fill='%23f0f0f0'/%3E%3C/svg%3E" 
+                             data-src="https://images.unsplash.com/photo-1414609245224-afa02bfb3fda?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Business Networking" 
+                             class="lazy-image">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h3>Business Networking & Relations</h3>
@@ -1051,8 +1090,9 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-
+    
     <!-- Contact Section -->
     <section id="contact" class="section dark-section">
         <div class="container">
@@ -1164,7 +1204,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -1241,12 +1281,12 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top">
         <i class="ri-arrow-up-line"></i>
     </button>
-
+    
     <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
