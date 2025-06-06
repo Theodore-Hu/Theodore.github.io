@@ -383,14 +383,24 @@ button, input, textarea {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, 
-        rgba(18, 18, 18, 0.9) 0%, 
-        rgba(40, 44, 52, 0.7) 50%, 
-        rgba(18, 18, 18, 0.9) 100%),
-        url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: heroZoom 20s ease-in-out infinite alternate;
+        #0f0f23 0%, 
+        #1a1a2e 25%, 
+        #16213e 50%, 
+        #0f3460 75%, 
+        #533483 100%);
+    animation: gradientShift 15s ease-in-out infinite alternate;
+}
+
+@keyframes gradientShift {
+    0% { 
+        background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+    }
+    50% { 
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #0f0f23 100%);
+    }
+    100% { 
+        background: linear-gradient(135deg, #16213e 0%, #0f3460 25%, #533483 50%, #0f0f23 75%, #1a1a2e 100%);
+    }
 }
 
 .hero-particles {
@@ -1599,6 +1609,7 @@ button, input, textarea {
     border-radius: var(--border-radius-large);
     padding: 40px;
     box-shadow: var(--shadow);
+    backdrop-filter: blur(10px);
 }
 
 .form-header {
@@ -1607,12 +1618,12 @@ button, input, textarea {
 }
 
 .form-header h3 {
-    color: var(--color-light);
+    color: var(--color-secondary);
     margin-bottom: 10px;
 }
 
 .form-header p {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--color-gray);
     font-size: 0.9rem;
     margin: 0;
 }
@@ -1651,8 +1662,13 @@ button, input, textarea {
 .form-group input:focus,
 .form-group textarea:focus {
     border-color: var(--color-primary);
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--color-light);
     box-shadow: 0 0 0 3px rgba(184, 157, 100, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--color-gray-light);
 }
 
 .form-icon {
@@ -1687,6 +1703,51 @@ button, input, textarea {
 
 .form-status.error {
     color: var(--color-danger);
+}
+
+/* Contact Section Responsive Design */
+@media screen and (max-width: 991px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        gap: 40px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .contact-form-container {
+        padding: 30px;
+    }
+    
+    .contact-details {
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contact-container {
+        gap: 30px;
+    }
+    
+    .contact-form-container {
+        padding: 25px;
+    }
+    
+    .contact-intro h3 {
+        font-size: 1.5rem;
+    }
+    
+    .contact-intro p {
+        font-size: 1rem;
+    }
 }
 
 /* ==========================================================================
@@ -1797,7 +1858,7 @@ button, input, textarea {
     justify-content: space-between;
     align-items: center;
     padding-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -1828,6 +1889,74 @@ button, input, textarea {
     color: var(--color-danger);
     margin: 0 3px;
 }
+
+/* Footer responsive fixes - 添加到footer部分的最后 */
+@media screen and (max-width: 1200px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .footer-brand {
+        grid-column: span 2;
+        max-width: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-brand {
+        grid-column: span 1;
+        max-width: none;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .footer-credit {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        padding: 60px 0 20px;
+    }
+    
+    .footer-content {
+        padding: 0 15px;
+    }
+    
+    .footer-main {
+        gap: 25px;
+    }
+}
+
 
 /* ==========================================================================
    Back to Top Button
@@ -2247,28 +2376,4 @@ textarea:focus {
 
 @keyframes spin {
     to { transform: rotate(360deg); }
-}
-
-/* Footer responsive fixes */
-@media screen and (max-width: 991px) {
-    .footer-main {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 40px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .footer-main {
-        grid-template-columns: 1fr !important;
-        gap: 30px;
-        text-align: center;
-    }
-    
-    .footer-brand {
-        max-width: none;
-    }
-    
-    .footer-column {
-        text-align: center;
-    }
 }
