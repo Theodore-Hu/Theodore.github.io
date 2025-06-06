@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Theodore Hu - Personal Portfolio">
+    <meta name="description" content="Theodore Hu (胡云韬) - Harbor, Coastal and Offshore Engineering Master | Project Engineer at China State Construction Engineering (Hong Kong) Ltd.">
+    <meta name="keywords" content="Theodore Hu, 胡云韬, Civil Engineer, Ocean University of China, Hong Kong, Project Management">
     <meta name="theme-color" content="#121212">
-    <title>Theodore Hu | Personal Portfolio</title>
+    <meta property="og:title" content="Theodore Hu | Civil Engineer & Project Manager">
+    <meta property="og:description" content="专业土木工程师，中国海洋大学硕士，现任中建香港工程师">
+    <meta property="og:type" content="website">
+    <title>Theodore Hu (胡云韬) | Personal Portfolio</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,7 +24,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #121212;
+            background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -32,20 +36,33 @@
         .preloader-logo {
             font-family: 'Playfair Display', serif;
             color: #ffffff;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             font-weight: 400;
-            letter-spacing: 0.5rem;
+            letter-spacing: 0.8rem;
             margin-bottom: 2rem;
             opacity: 0;
             animation: fadeIn 1s ease forwards 0.5s;
+            text-align: center;
+        }
+        
+        .preloader-subtitle {
+            font-family: 'Poppins', sans-serif;
+            color: #b89d64;
+            font-size: 0.9rem;
+            font-weight: 300;
+            letter-spacing: 0.2rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 0.8s;
         }
         
         .preloader-bar {
-            width: 150px;
-            height: 1px;
+            width: 200px;
+            height: 2px;
             background-color: rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
+            border-radius: 1px;
         }
         
         .preloader-progress {
@@ -54,12 +71,13 @@
             left: 0;
             height: 100%;
             width: 0;
-            background-color: rgba(255, 255, 255, 0.8);
-            animation: progress 2s ease forwards;
+            background: linear-gradient(90deg, #b89d64, #d4af37);
+            animation: progress 2.5s ease forwards;
+            border-radius: 1px;
         }
         
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
@@ -69,11 +87,11 @@
         }
     </style>
 </head>
-
 <body>
     <!-- Preloader -->
     <div class="preloader">
         <div class="preloader-logo">THEODORE HU</div>
+        <div class="preloader-subtitle">胡云韬</div>
         <div class="preloader-bar">
             <div class="preloader-progress"></div>
         </div>
@@ -83,35 +101,55 @@
     <nav class="main-nav">
         <div class="nav-container">
             <div class="logo">
-                <a href="#home">T.H</a>
+                <a href="#home">T.H<span class="logo-dot">.</span></a>
             </div>
             <div class="nav-toggle">
                 <div class="nav-toggle-icon"></div>
             </div>
             <ul class="nav-links">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-bg"></div>
+        <div class="hero-bg">
+            <div class="hero-particles"></div>
+        </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="reveal-text">Theodore Hu</h1>
-            <p class="hero-subtitle reveal-text-delay">Civil Engineer & Project Manager</p>
+            <div class="hero-intro">
+                <span class="hero-greeting">Hello, I'm</span>
+            </div>
+            <h1 class="hero-name reveal-text">Theodore Hu</h1>
+            <div class="hero-chinese-name reveal-text-delay">胡云韬</div>
+            <p class="hero-subtitle reveal-text-delay-2">Civil Engineer & Project Manager</p>
+            <div class="hero-description">
+                <p>Master's Graduate from Ocean University of China<br>
+                Currently working at China State Construction Engineering (Hong Kong) Ltd.</p>
+            </div>
             <div class="hero-tags">
-                <span class="tag">China State Construction Engineering (Hong Kong) Ltd.</span>
-                <span class="tag">Ocean University of China</span>
+                <span class="tag">Harbor & Coastal Engineering</span>
+                <span class="tag">Project Management</span>
+                <span class="tag">Research & Innovation</span>
                 <span class="tag">Hong Kong</span>
             </div>
             <div class="hero-cta">
-                <a href="#about" class="btn-primary">Discover More</a>
+                <a href="#about" class="btn-primary">
+                    <span>Discover More</span>
+                    <i class="ri-arrow-down-line"></i>
+                </a>
+                <a href="#contact" class="btn-secondary">
+                    <span>Get In Touch</span>
+                    <i class="ri-mail-line"></i>
+                </a>
             </div>
         </div>
         <div class="scroll-indicator">
@@ -125,20 +163,44 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
+                <div class="section-subtitle">Get to know Theodore Hu (胡云韬)</div>
                 <div class="section-line"></div>
             </div>
             
             <div class="about-container">
                 <div class="about-image">
                     <div class="image-frame">
-                        <img src="images/bc2d52c9b189287cd2e59d1aefb2925.png" alt="Theodore Hu">
+                        <img src="images/bc2d52c9b189287cd2e59d1aefb2925.png" alt="Theodore Hu Portrait">
+                        <div class="image-decoration"></div>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">100+</div>
+                            <div class="stat-label">Team Members Led</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2</div>
+                            <div class="stat-label">Published Papers</div>
+                        </div>
                     </div>
                 </div>
                 <div class="about-content">
+                    <div class="about-intro">
+                        <h3>Civil Engineer & Research Specialist</h3>
+                        <p class="lead-text">A dedicated professional combining technical expertise with leadership excellence</p>
+                    </div>
                     <div class="about-text">
-                        <p class="fade-in">I'm a civil engineer currently working at China State Construction Engineering (Hong Kong) Ltd., where I joined through the "Maritime Talents" recruitment program after completing my master's degree in Harbor, Coastal and Offshore Engineering.</p>
-                        <p class="fade-in">With a background in both technical engineering and project management, I bring a unique blend of analytical problem-solving and leadership skills to every project. My experience spans from coastal engineering research to practical construction management.</p>
-                        <p class="fade-in">Beyond my professional pursuits, I'm an accomplished pianist (Grade 10) and sports enthusiast. I believe in maintaining a balance between technical expertise and creative expression, which allows me to approach challenges from multiple perspectives.</p>
+                        <p class="fade-in">I'm Theodore Hu (胡云韬), a civil engineer currently working at China State Construction Engineering (Hong Kong) Ltd., where I joined through the prestigious "Maritime Talents" recruitment program after completing my Master's degree in Harbor, Coastal and Offshore Engineering at Ocean University of China.</p>
+                        
+                        <p class="fade-in">With a strong academic foundation (GPA: 3.68/4.0, ranked 5th out of 26 in my program), I bring both theoretical knowledge and practical experience to complex engineering challenges. My research in multiphase flow analysis has been published in the EI Journal "Engineering Mechanics," and I have a second SCI paper currently under review.</p>
+                        
+                        <p class="fade-in">Beyond technical skills, I've demonstrated exceptional leadership as President of the Alumni Volunteer Association, managing over 100 members and coordinating services for 1000+ alumni. My diverse background includes international business experience, multilingual capabilities (English CET-6, Cantonese, Spanish), and artistic achievements including Grade 10 piano certification.</p>
+                        
+                        <p class="fade-in">I believe in balancing technical precision with creative thinking, which allows me to approach engineering challenges from unique perspectives and deliver innovative solutions.</p>
                     </div>
                     <div class="about-info">
                         <div class="info-item fade-in">
@@ -146,8 +208,17 @@
                                 <i class="ri-building-line"></i>
                             </div>
                             <div class="info-content">
-                                <h3>Position</h3>
-                                <p>Project Engineer</p>
+                                <h4>Current Position</h4>
+                                <p>Project Engineer<br><span class="company">China State Construction Engineering (Hong Kong) Ltd.</span></p>
+                            </div>
+                        </div>
+                        <div class="info-item fade-in">
+                            <div class="info-icon">
+                                <i class="ri-graduation-cap-line"></i>
+                            </div>
+                            <div class="info-content">
+                                <h4>Education</h4>
+                                <p>Master's in Harbor, Coastal & Offshore Engineering<br><span class="company">Ocean University of China</span></p>
                             </div>
                         </div>
                         <div class="info-item fade-in">
@@ -155,8 +226,8 @@
                                 <i class="ri-map-pin-line"></i>
                             </div>
                             <div class="info-content">
-                                <h3>Location</h3>
-                                <p>Hong Kong</p>
+                                <h4>Location</h4>
+                                <p>Hong Kong SAR<br><span class="company">Originally from Huanggang, Hubei</span></p>
                             </div>
                         </div>
                         <div class="info-item fade-in">
@@ -164,8 +235,8 @@
                                 <i class="ri-book-mark-line"></i>
                             </div>
                             <div class="info-content">
-                                <h3>Motto</h3>
-                                <p>韬略拓开新航路，小我筑成天下梁</p>
+                                <h4>Personal Motto</h4>
+                                <p>韬略拓开新航路，小我筑成天下梁<br><span class="company">"Strategic wisdom opens new paths, individual efforts build bridges for the world"</span></p>
                             </div>
                         </div>
                     </div>
@@ -178,44 +249,403 @@
     <section id="experience" class="section dark-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Experience & Education</h2>
+                <h2 class="section-title">Professional Journey</h2>
+                <div class="section-subtitle">Experience & Education Timeline</div>
                 <div class="section-line"></div>
             </div>
             
             <div class="timeline">
+                <!-- Current Position -->
                 <div class="timeline-container left">
                     <div class="timeline-content">
-                        <h3 class="timeline-year">Present</h3>
-                        <h4 class="timeline-title">China State Construction Engineering (Hong Kong) Ltd.</h4>
-                        <p>Working as a project engineer on major infrastructure developments in Hong Kong. Applying both technical knowledge and management skills to deliver complex projects.</p>
+                        <div class="timeline-badge current">
+                            <i class="ri-building-line"></i>
+                        </div>
+                        <h3 class="timeline-year">2025 - Present</h3>
+                        <h4 class="timeline-title">Project Engineer</h4>
+                        <h5 class="timeline-company">China State Construction Engineering (Hong Kong) Ltd.</h5>
+                        <p>Joined through the prestigious "Maritime Talents" recruitment program. Working on major infrastructure developments in Hong Kong, applying both technical engineering knowledge and project management skills to deliver complex construction projects.</p>
+                        <div class="timeline-skills">
+                            <span class="skill-tag">Project Management</span>
+                            <span class="skill-tag">Infrastructure Development</span>
+                            <span class="skill-tag">Quality Control</span>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Master's Degree -->
                 <div class="timeline-container right">
                     <div class="timeline-content">
-                        <h3 class="timeline-year">2022-2025</h3>
-                        <h4 class="timeline-title">Master's Degree, Ocean University of China</h4>
-                        <p>Harbor, Coastal and Offshore Engineering (GPA: 3.68/4.0). Conducted research on multiphase flow analysis in subsea pipelines. Published in the EI Journal "Engineering Mechanics".</p>
+                        <div class="timeline-badge education">
+                            <i class="ri-graduation-cap-line"></i>
+                        </div>
+                        <h3 class="timeline-year">2022 - 2025</h3>
+                        <h4 class="timeline-title">Master's Degree</h4>
+                        <h5 class="timeline-company">Ocean University of China - Harbor, Coastal and Offshore Engineering</h5>
+                        <p><strong>GPA: 3.68/4.0 (Ranked 5th/26)</strong><br>
+                        Conducted advanced research on multiphase flow analysis in subsea pipelines. Published research in EI Journal "Engineering Mechanics" with a second SCI paper under review. Specialized in fluid dynamics simulation and offshore engineering technologies.</p>
+                        <div class="timeline-details">
+                            <h6>Key Courses:</h6>
+                            <ul>
+                                <li>Mathematical Methods in Physics</li>
+                                <li>Modern Construction Technology & Engineering Management</li>
+                                <li>Marine Engineering Environment</li>
+                                <li>Urban Water Resources Planning</li>
+                                <li>Water Engineering Economics</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
+                <!-- International Business Experience -->
                 <div class="timeline-container left">
                     <div class="timeline-content">
-                        <h3 class="timeline-year">2019-2020</h3>
-                        <h4 class="timeline-title">President, Alumni Volunteer Association</h4>
-                        <p>Led a team of 100+ members, organized numerous events, and managed alumni relations. Developed strong leadership and coordination skills while securing sponsorships and partnerships.</p>
-                    </div>
-                </div>
-                <div class="timeline-container right">
-                    <div class="timeline-content">
-                        <h3 class="timeline-year">2017-2021</h3>
-                        <h4 class="timeline-title">Bachelor's Degree, Ocean University of China</h4>
-                        <p>Harbor, Channel, and Coastal Engineering. Earned almost all the scholarships and awards at school.</p>
-                    </div>
-                </div>
-                <div class="timeline-container left">
-                    <div class="timeline-content">
+                        <div class="timeline-badge internship">
+                            <i class="ri-global-line"></i>
+                        </div>
                         <h3 class="timeline-year">2024</h3>
-                        <h4 class="timeline-title">International Business Development</h4>
-                        <p>Gained experience in international trade and business development at Dongguan Chipwell Electronic Technology Co., managing online platforms and handling client inquiries.</p>
+                        <h4 class="timeline-title">Foreign Trade Salesperson</h4>
+                        <h5 class="timeline-company">Dongguan Chipwell Electronic Technology Co., Ltd.</h5>
+                        <p>Managed Alibaba International store operations, handled RFQ processes, and coordinated production line activities. Successfully processed 20+ daily inquiries and developed a potential multi-million RMB contract opportunity.</p>
+                        <div class="timeline-achievements">
+                            <p><i class="ri-trophy-line"></i> Achieved highest potential contract value of several million RMB</p>
+                            <p><i class="ri-customer-service-line"></i> Processed 20+ daily international inquiries</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Engineering Assistant -->
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <div class="timeline-badge internship">
+                            <i class="ri-tools-line"></i>
+                        </div>
+                        <h3 class="timeline-year">2024</h3>
+                        <h4 class="timeline-title">Engineering Assistant</h4>
+                        <h5 class="timeline-company">China National Chemical Engineering No.16 Construction Co., Ltd.</h5>
+                        <p>Participated in safety inspections, compiled construction logs, and organized project documentation. Gained hands-on experience in construction site management and quality control procedures.</p>
+                    </div>
+                </div>
+
+                <!-- Leadership Experience -->
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <div class="timeline-badge leadership">
+                            <i class="ri-team-line"></i>
+                        </div>
+                        <h3 class="timeline-year">2019 - 2020</h3>
+                        <h4 class="timeline-title">President</h4>
+                        <h5 class="timeline-company">Alumni Volunteer Association, Ocean University of China</h5>
+                        <p>Led a dynamic team of 100+ members in organizing diverse activities including university anniversaries, alumni weddings, receptions, and forum operations. Secured multiple sponsorships and coordinated volunteer services serving over 1,000 alumni.</p>
+                        <div class="timeline-achievements">
+                            <p><i class="ri-team-line"></i> Managed 100+ team members</p>
+                            <p><i class="ri-user-heart-line"></i> Served 1,000+ alumni</p>
+                            <p><i class="ri-money-dollar-circle-line"></i> Secured sponsorships ranging from hundreds to thousands RMB</p>
+                            <p><i class="ri-calendar-event-line"></i> Organized 10+ annual events and team-building activities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bachelor's Degree -->
+                <div class="timeline-container right">
+                    <div class="timeline-content">
+                        <div class="timeline-badge education">
+                            <i class="ri-graduation-cap-line"></i>
+                        </div>
+                        <h3 class="timeline-year">2017 - 2021</h3>
+                        <h4 class="timeline-title">Bachelor's Degree</h4>
+                        <h5 class="timeline-company">Ocean University of China - Harbor, Channel, and Coastal Engineering</h5>
+                        <p>Earned almost all available scholarships and awards during undergraduate studies. Developed a strong foundation in civil engineering principles, coastal engineering, and project management.</p>
+                        <div class="timeline-achievements">
+                            <p><i class="ri-award-line"></i> Received nearly all available university scholarships</p>
+                            <p><i class="ri-medal-line"></i> Multiple academic excellence awards</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Piano Teaching -->
+                <div class="timeline-container left">
+                    <div class="timeline-content">
+                        <div class="timeline-badge personal">
+                            <i class="ri-music-line"></i>
+                        </div>
+                        <h3 class="timeline-year">2019</h3>
+                        <h4 class="timeline-title">Piano Instructor</h4>
+                        <h5 class="timeline-company">DuoDuo Music School</h5>
+                        <p>Taught piano techniques to students grades 3-5, demonstrating my commitment to education and ability to communicate complex concepts clearly. Leveraged my Grade 10 piano certification to inspire young musicians.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Research & Publications</h2>
+                <div class="section-subtitle">Academic Contributions & Technical Innovation</div>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="research-container">
+                <div class="research-overview fade-in">
+                    <h3>Research Focus</h3>
+                    <p>My research centers on multiphase flow analysis in subsea pipelines, with applications in both offshore oil & gas operations and deep-sea mining. This work addresses critical challenges in fluid dynamics, pipeline design optimization, and offshore engineering safety.</p>
+                </div>
+
+                <div class="research-projects">
+                    <div class="research-item fade-in">
+                        <div class="research-header">
+                            <div class="research-icon">
+                                <i class="ri-water-percent-line"></i>
+                            </div>
+                            <div class="research-meta">
+                                <h4>Multiphase Flow Analysis in Subsea Pipelines</h4>
+                                <p class="research-period">2022.08 - 2025.06</p>
+                                <div class="research-status">Ongoing Research</div>
+                            </div>
+                        </div>
+                        
+                        <div class="research-content">
+                            <h5>Project Overview</h5>
+                            <p>Leading research on multiphase flow dynamics in deep-sea mining and offshore oil & gas transport systems. This comprehensive study involves both theoretical analysis and advanced computational modeling.</p>
+                            
+                            <h5>Research Projects</h5>
+                            <ul class="research-projects-list">
+                                <li><strong>National Natural Science Foundation Project:</strong> "Erosion Problems of High-Concentration Sand Slurry in Ship-Based Dredging Pipelines Based on Dual-Attribute Smooth Particles" (Project No. 52171280)</li>
+                                <li><strong>Deep-Sea Polymetallic Nodule Project:</strong> "Key Core Technologies for Deep-Sea Mining - Ultra-Deep Water Coarse Particle Mineral Safe Transportation Technology" (Special Project 5, Topic 5.2)</li>
+                            </ul>
+                            
+                            <h5>Technical Methodology</h5>
+                            <div class="methodology-grid">
+                                <div class="method-item">
+                                    <i class="ri-brain-line"></i>
+                                    <h6>Theoretical Analysis</h6>
+                                    <p>Gas-liquid two-phase flow dynamics and microfluidics principles</p>
+                                </div>
+                                <div class="method-item">
+                                    <i class="ri-computer-line"></i>
+                                    <h6>Computational Simulation</h6>
+                                    <p>ANSYS Fluent coupled with multiple specialized software tools</p>
+                                </div>
+                                <div class="method-item">
+                                    <i class="ri-code-line"></i>
+                                    <h6>Software Development</h6>
+                                    <p>Secondary development using C programming language (1000+ lines of code)</p>
+                                </div>
+                                <div class="method-item">
+                                    <i class="ri-bar-chart-line"></i>
+                                    <h6>Data Processing</h6>
+                                    <p>Advanced analysis using MATLAB and Origin software</p>
+                                </div>
+                            </div>
+                            
+                            <h5>Research Achievements</h5>
+                            <div class="achievements-list">
+                                <div class="achievement-item">
+                                    <i class="ri-file-text-line"></i>
+                                    <div>
+                                        <strong>Published Paper</strong>
+                                        <p>First-author publication in EI Journal "Engineering Mechanics" - a prestigious engineering publication</p>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="ri-draft-line"></i>
+                                    <div>
+                                        <strong>Second Publication</strong>
+                                        <p>JCR Q1 journal paper currently under review - targeting top-tier international publication</p>
+                                    </div>
+                                </div>
+                                <div class="achievement-item">
+                                    <i class="ri-settings-line"></i>
+                                    <div>
+                                        <strong>Technical Innovation</strong>
+                                        <p>Developed novel computational models for pipeline optimization in extreme offshore conditions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-skills fade-in">
+                    <h3>Research Technologies & Tools</h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="ri-computer-line"></i>
+                            </div>
+                            <h4>ANSYS Fluent</h4>
+                            <p>Advanced fluid dynamics simulation and multiphase flow modeling</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="ri-code-s-slash-line"></i>
+                            </div>
+                            <h4>C Programming</h4>
+                            <p>Software secondary development and custom algorithm implementation</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="ri-function-line"></i>
+                            </div>
+                            <h4>MATLAB</h4>
+                            <p>Mathematical modeling, data analysis, and visualization</p>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon">
+                                <i class="ri-bar-chart-box-line"></i>
+                            </div>
+                            <h4>Origin</h4>
+                            <p>Scientific data analysis and professional graph creation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achievements Section -->
+    <section id="achievements" class="section dark-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements & Recognition</h2>
+                <div class="section-subtitle">Awards, Leadership & Personal Excellence</div>
+                <div class="section-line"></div>
+            </div>
+            
+            <div class="achievements-container">
+                <!-- Academic Awards -->
+                <div class="achievement-category fade-in">
+                    <h3 class="category-title">
+                        <i class="ri-graduation-cap-line"></i>
+                        Academic Excellence
+                    </h3>
+                    <div class="awards-grid">
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-medal-line"></i>
+                            </div>
+                            <h4>Outstanding Graduate Student</h4>
+                            <p>Recognized for exceptional academic performance and research contributions</p>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-trophy-line"></i>
+                            </div>
+                            <h4>Multiple Scholarships</h4>
+                            <p>Academic, Innovation, Social Practice, and Arts & Sports Scholarships</p>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-star-line"></i>
+                            </div>
+                            <h4>Top 20% Academic Ranking</h4>
+                            <p>Ranked 5th out of 26 in Master's program (GPA: 3.68/4.0)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Leadership Awards -->
+                <div class="achievement-category fade-in">
+                    <h3 class="category-title">
+                        <i class="ri-team-line"></i>
+                        Leadership & Service
+                    </h3>
+                    <div class="awards-grid">
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-user-star-line"></i>
+                            </div>
+                            <h4>Outstanding Youth League Member</h4>
+                            <p>Recognized for exceptional leadership and community contribution</p>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-shield-star-line"></i>
+                            </div>
+                            <h4>Outstanding Graduate Student Cadre</h4>
+                            <p>Excellence in student leadership and organizational management</p>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-service-line"></i>
+                            </div>
+                            <h4>100+ Hours Volunteer Service</h4>
+                            <p>Dedicated community service and alumni relations management</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Competition Results -->
+                <div class="achievement-category fade-in">
+                    <h3 class="category-title">
+                        <i class="ri-trophy-line"></i>
+                        Competitions & Sports
+                    </h3>
+                    <div class="awards-grid">
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-basketball-line"></i>
+                            </div>
+                            <h4>Basketball Championship</h4>
+                            <p>Led team to victory in university-level basketball tournament</p>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-building-2-line"></i>
+                            </div>
+                            <h4>Structural Design Competition</h4>
+                            <p>6th place out of 100 participants in university engineering competition</p>
+                        </div>
+                        <div class="award-item">
+                            <div class="award-icon">
+                                <i class="ri-music-2-line"></i>
+                            </div>
+                            <h4>Piano Grade 10 Certification</h4>
+                            <p>Highest level certification with multiple stage performance experiences</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Professional Projects -->
+                <div class="achievement-category fade-in">
+                    <h3 class="category-title">
+                        <i class="ri-briefcase-line"></i>
+                        Professional Impact
+                    </h3>
+                    <div class="project-highlights">
+                        <div class="project-highlight">
+                            <div class="project-icon">
+                                <i class="ri-edit-line"></i>
+                            </div>
+                            <div class="project-content">
+                                <h4>Centennial Anniversary Alumni Documentation</h4>
+                                <p><strong>Team Leader</strong> - Led comprehensive alumni interview project for Ocean University's 100th anniversary</p>
+                                <div class="project-achievements">
+                                    <span class="achievement-badge">13 Manuscripts</span>
+                                    <span class="achievement-badge">All Rated Excellent</span>
+                                    <span class="achievement-badge">Selected for Publication</span>
+                                </div>
+                                <p class="project-description">Conducted interviews with distinguished alumni including two high-ranking officials. Responsible for manuscript writing and editing coordination across the entire Engineering School.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="project-highlight">
+                            <div class="project-icon">
+                                <i class="ri-global-line"></i>
+                            </div>
+                            <div class="project-content">
+                                <h4>International Business Development</h4>
+                                <p><strong>Foreign Trade Specialist</strong> - Managed international e-commerce operations</p>
+                                <div class="project-achievements">
+                                    <span class="achievement-badge">20+ Daily Inquiries</span>
+                                    <span class="achievement-badge">Multi-Million RMB Potential</span>
+                                    <span class="achievement-badge">Platform Management</span>
+                                </div>
+                                <p class="project-description">Successfully managed Alibaba International store operations, developed high-value client relationships, and coordinated cross-cultural business communications.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -227,129 +657,206 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Skills & Expertise</h2>
+                <div class="section-subtitle">Technical Proficiency & Personal Capabilities</div>
                 <div class="section-line"></div>
             </div>
             
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skills-category">
                     <div class="skill-group fade-in">
-                        <h3 class="skill-title">Technical Skills</h3>
+                        <h3 class="skill-title">
+                            <i class="ri-tools-line"></i>
+                            Technical Engineering
+                        </h3>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <span class="skill-name">Engineering Analysis</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Fluid Dynamics Analysis</span>
+                                    <span class="skill-percentage">95%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                                <p class="skill-description">Advanced multiphase flow analysis and offshore pipeline design</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Project Management</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Project Management</span>
+                                    <span class="skill-percentage">90%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                                <p class="skill-description">Construction project coordination and team leadership</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Construction Planning</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Construction Planning</span>
+                                    <span class="skill-percentage">85%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                                <p class="skill-description">Site management and quality control procedures</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Fluid Dynamics Simulation</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Research & Development</span>
+                                    <span class="skill-percentage">92%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                                <p class="skill-description">Academic research methodology and innovation</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="skill-group fade-in">
-                        <h3 class="skill-title">Software & Tools</h3>
+                        <h3 class="skill-title">
+                            <i class="ri-computer-line"></i>
+                            Software & Programming
+                        </h3>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <span class="skill-name">ANSYS Fluent</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">ANSYS Fluent</span>
+                                    <span class="skill-percentage">90%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                                <p class="skill-description">Advanced CFD simulation and multiphase modeling</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">MATLAB</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">MATLAB Programming</span>
+                                    <span class="skill-percentage">85%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                                <p class="skill-description">Mathematical modeling and data analysis</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">C Programming</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 75%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">C Programming</span>
+                                    <span class="skill-percentage">75%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                                <p class="skill-description">Software secondary development (1000+ lines)</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Microsoft Office Suite</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Microsoft Office Suite</span>
+                                    <span class="skill-percentage">95%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                                <p class="skill-description">Advanced document processing and presentation</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="skill-category">
+                <div class="skills-category">
                     <div class="skill-group fade-in">
-                        <h3 class="skill-title">Languages</h3>
+                        <h3 class="skill-title">
+                            <i class="ri-global-line"></i>
+                            Languages & Communication
+                        </h3>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <span class="skill-name">Chinese (Native)</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 100%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Chinese (Native)</span>
+                                    <span class="skill-percentage">100%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="100%"></div>
+                                </div>
+                                <p class="skill-description">Native fluency in Mandarin and regional dialects</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Cantonese (Professional)</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">English (CET-6)</span>
+                                    <span class="skill-percentage">75%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                                <p class="skill-description">Professional proficiency, experienced as translator</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">English (Basic)</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 50%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Cantonese</span>
+                                    <span class="skill-percentage">70%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70%"></div>
+                                </div>
+                                <p class="skill-description">Conversational level for Hong Kong business environment</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Spanish (Elementary)</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 20%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Spanish (Elementary)</span>
+                                    <span class="skill-percentage">25%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="25%"></div>
+                                </div>
+                                <p class="skill-description">One year of formal study, basic conversation</p>
                             </div>
                         </div>
                     </div>
                     
                     <div class="skill-group fade-in">
-                        <h3 class="skill-title">Personal Skills</h3>
+                        <h3 class="skill-title">
+                            <i class="ri-heart-line"></i>
+                            Personal Excellence
+                        </h3>
                         <div class="skill-items">
                             <div class="skill-item">
-                                <span class="skill-name">Leadership</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Leadership & Management</span>
+                                    <span class="skill-percentage">95%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                                <p class="skill-description">Led 100+ member teams and 1000+ service recipients</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Piano Performance (Grade 10)</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 90%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Piano Performance (Grade 10)</span>
+                                    <span class="skill-percentage">90%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                                <p class="skill-description">Highest certification with stage performance experience</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Basketball</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 85%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Athletics & Sports</span>
+                                    <span class="skill-percentage">85%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                                <p class="skill-description">Basketball championship and various sports proficiency</p>
                             </div>
                             <div class="skill-item">
-                                <span class="skill-name">Project Coordination</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" style="width: 95%;"></div>
+                                <div class="skill-header">
+                                    <span class="skill-name">Cross-Cultural Communication</span>
+                                    <span class="skill-percentage">88%</span>
                                 </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                                <p class="skill-description">International business and multicultural team experience</p>
                             </div>
                         </div>
                     </div>
@@ -363,6 +870,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Life & Moments</h2>
+                <div class="section-subtitle">Professional Journey & Personal Interests</div>
                 <div class="section-line"></div>
             </div>
             
@@ -371,120 +879,134 @@
                 <button class="filter-btn" data-filter="professional">Professional</button>
                 <button class="filter-btn" data-filter="academic">Academic</button>
                 <button class="filter-btn" data-filter="personal">Personal</button>
+                <button class="filter-btn" data-filter="leadership">Leadership</button>
             </div>
             
             <div class="gallery-container">
                 <div class="gallery-item professional" data-category="professional">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1515923152115-758a6b16f35e?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Construction Site">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Construction Site Work" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h3>Project Site Visit</h3>
-                                <p>Hong Kong · 2025</p>
+                                <h3>Project Site Management</h3>
+                                <p>Construction Engineering · Hong Kong · 2025</p>
+                                <div class="gallery-tags">
+                                    <span class="gallery-tag">Engineering</span>
+                                    <span class="gallery-tag">Management</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="gallery-item academic" data-category="academic">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Research Lab">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Research Laboratory" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h3>Research Lab</h3>
-                                <p>Ocean University · 2024</p>
+                                <h3>Fluid Dynamics Research</h3>
+                                <p>Ocean University Lab · Qingdao · 2024</p>
+                                <div class="gallery-tags">
+                                    <span class="gallery-tag">Research</span>
+                                    <span class="gallery-tag">ANSYS</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="gallery-item personal" data-category="personal">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Piano Performance">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Piano Performance" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h3>Piano Recital</h3>
-                                <p>HuangGang · 2011</p>
+                                <h3>Piano Recital Performance</h3>
+                                <p>Grade 10 Certification · Huanggang · 2011</p>
+                                <div class="gallery-tags">
+                                    <span class="gallery-tag">Music</span>
+                                    <span class="gallery-tag">Performance</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <div class="gallery-item leadership" data-category="leadership">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team Leadership" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Alumni Association Leadership</h3>
+                                <p>Team Management · Ocean University · 2020</p>
+                                <div class="gallery-tags">
+                                    <span class="gallery-tag">Leadership</span>
+                                    <span class="gallery-tag">Management</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item academic" data-category="academic">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="University Campus" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Campus Academic Life</h3>
+                                <p>Ocean University · Qingdao · 2024</p>
+                                <div class="gallery-tags">
+                                    <span class="gallery-tag">Academic</span>
+                                    <span class="gallery-tag">Campus</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item personal" data-category="personal">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1546519638-68e109acd27d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Basketball Championship" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Basketball Championship</h3>
+                                <p>University Tournament · Qingdao · 2023</p>
+                                <div class="gallery-tags">
+                                    <span class="gallery-tag">Sports</span>
+                                    <span class="gallery-tag">Championship</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="gallery-item professional" data-category="professional">
                     <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Team Meeting">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="International Business" loading="lazy">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h3>Team Meeting</h3>
-                                <p>Hong Kong · 2025</p>
+                                <h3>International Trade Operations</h3>
+                                <p>Alibaba Platform · Dongguan · 2024</p>
+                                <div class="gallery-tags">
+                                    <span class="gallery-tag">Business</span>
+                                    <span class="gallery-tag">International</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="gallery-item academic" data-category="academic">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="University Campus">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h3>Campus Life</h3>
-                                <p>Ocean University · 2024</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="gallery-item personal" data-category="personal">
-                    <div class="gallery-image">
-                        <img src="https://images.unsplash.com/photo-1546519638-68e109acd27d?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80" alt="Basketball">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h3>Basketball Tournament</h3>
-                                <p>Qingdao · 2023</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Featured Projects -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <div class="section-line"></div>
-            </div>
-            
-            <div class="projects-container">
-                <div class="project-item fade-in">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1507334451450-8a3efc777cd4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Research Project">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Multiphase Flow Analysis in Subsea Pipelines</h3>
-                        <p class="project-description">Led research on fluid dynamics in deep-sea mining transport systems. Developed simulation models using ANSYS Fluent and custom C programming to optimize pipeline designs for offshore operations.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Fluid Dynamics</span>
-                            <span class="project-tag">Simulation</span>
-                            <span class="project-tag">Offshore Engineering</span>
-                        </div>
-                        <div class="project-achievements">
-                            <p>Published in Engineering Mechanics (EI Journal)</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-item fade-in">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Infrastructure Project">
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Centennial Anniversary Alumni Documentation</h3>
-                        <p class="project-description">Led a team conducting interviews with distinguished alumni for Ocean University's centennial celebration. Managed the editing process for all Engineering School interview manuscripts.</p>
-                        <div class="project-tags">
-                            <span class="project-tag">Project Management</span>
-                            <span class="project-tag">Editorial</span>
-                            <span class="project-tag">Leadership</span>
-                        </div>
-                        <div class="project-achievements">
-                            <p>All 13 manuscripts received excellent ratings and were selected for publication</p>
+                <div class="gallery-item leadership" data-category="leadership">
+                    <div class="gallery-image">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Alumni Interview Project" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Alumni Interview Project</h3>
+                                <p>Centennial Documentation · Ocean University · 2023</p>
+                                <div class="gallery-tags">
+                                    <span class="gallery-tag">Project</span>
+                                    <span class="gallery-tag">Editorial</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -493,59 +1015,111 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section dark-section">
+    <section id="contact" class="section">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Get In Touch</h2>
+                <div class="section-subtitle">Let's connect and explore opportunities</div>
                 <div class="section-line"></div>
             </div>
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="ri-map-pin-line"></i>
-                        </div>
-                        <div class="contact-text">
-                            <h3>Location</h3>
-                            <p>Hong Kong SAR, China</p>
-                        </div>
+                    <div class="contact-intro">
+                        <h3>Let's Start a Conversation</h3>
+                        <p>I'm always interested in discussing new opportunities, collaborative projects, or simply connecting with fellow professionals. Whether you're looking for engineering expertise, research collaboration, or project management skills, I'd love to hear from you.</p>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="ri-mail-line"></i>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Hong Kong SAR, China</p>
+                                <span class="contact-sub">Originally from Huanggang, Hubei</span>
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <h3>Email</h3>
-                            <p>HuYunt1999@163.com</p>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="ri-mail-line"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>HuYunt1999@163.com</p>
+                                <span class="contact-sub">Professional inquiries welcome</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="ri-phone-line"></i>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="ri-phone-line"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+86 178 6072 3223</p>
+                                <span class="contact-sub">Available during business hours</span>
+                            </div>
                         </div>
-                        <div class="contact-text">
-                            <h3>Phone</h3>
-                            <p>+86 178 6072 3223</p>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="ri-briefcase-line"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Current Position</h4>
+                                <p>Project Engineer</p>
+                                <span class="contact-sub">China State Construction Engineering (Hong Kong) Ltd.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-header">
+                            <h3>Send a Message</h3>
+                            <p>I typically respond within 24 hours</p>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                                <div class="form-icon">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                                <div class="form-icon">
+                                    <i class="ri-mail-line"></i>
+                                </div>
+                            </div>
                         </div>
+                        
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                            <div class="form-icon">
+                                <i class="ri-bookmark-line"></i>
+                            </div>
                         </div>
-                        <button type="submit" class="btn-primary">Send Message</button>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Tell me about your project, question, or how I can help..."></textarea>
+                            <div class="form-icon">
+                                <i class="ri-message-line"></i>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary btn-submit">
+                            <span>Send Message</span>
+                            <i class="ri-send-plane-line"></i>
+                        </button>
+                        
+                        <div class="form-status"></div>
                     </form>
                 </div>
             </div>
@@ -553,33 +1127,88 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-logo">
-                    <a href="#home">Theodore Hu</a>
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <div class="footer-logo">
+                            <a href="#home">Theodore Hu</a>
+                            <span class="footer-subtitle">胡云韬</span>
+                        </div>
+                        <p class="footer-description">
+                            Civil Engineer & Project Manager passionate about offshore engineering, 
+                            research innovation, and building bridges between technical excellence and practical solutions.
+                        </p>
+                        
+                        <div class="footer-social">
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="ri-linkedin-fill"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="WeChat">
+                                <i class="ri-wechat-line"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Email">
+                                <i class="ri-mail-line"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <i class="ri-github-line"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Navigation</h4>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#experience">Experience</a></li>
+                                <li><a href="#research">Research</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Sections</h4>
+                            <ul>
+                                <li><a href="#achievements">Achievements</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#gallery">Gallery</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li>Hong Kong SAR</li>
+                                <li>HuYunt1999@163.com</li>
+                                <li>+86 178 6072 3223</li>
+                                <li>Civil Engineer</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="footer-social">
-                    <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
-                    <a href="#" class="social-link"><i class="ri-wechat-line"></i></a>
-                    <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
-                    <a href="#" class="social-link"><i class="ri-github-line"></i></a>
-                </div>
-                <div class="footer-nav">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#gallery">Gallery</a>
-                    <a href="#contact">Contact</a>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2024 Theodore Hu | All Rights Reserved</p>
+                
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        <p>&copy; 2024 Theodore Hu (胡云韬) | All Rights Reserved</p>
+                        <p class="footer-motto">韬略拓开新航路，小我垒成天下梁</p>
+                    </div>
+                    <div class="footer-credit">
+                        <p>Designed & Developed with <i class="ri-heart-fill"></i> by Theodore Hu</p>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="js/script.js"></script>
 </body>
 </html>
