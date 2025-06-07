@@ -983,6 +983,58 @@ document.addEventListener('DOMContentLoaded', function() {
         link.href = url;
         document.head.appendChild(link);
     });
+
+// ==========================================
+// Mobile Optimizations
+// ==========================================
+
+const initMobileOptimizations = () => {
+    try {
+        // 移动端视口高度调整
+        const setVH = () => {
+            const vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+        
+        setVH();
+        window.addEventListener('resize', debounce(setVH, 250));
+        
+        // 移动端触摸优化
+        if ('ontouchstart' in window) {
+            document.body.classList.add('touch-device');
+        }
+        
+        // 移动端键盘弹出处理
+        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            const inputs = document.querySelectorAll('input, textarea');
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    setTimeout(() => {
+                        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 300);
+                });
+            });
+        }
+        
+        // 移动端导航栏高度自适应
+        const adjustHeroHeight = () => {
+            const nav = document.querySelector('.main-nav');
+            const hero = document.querySelector('.hero-section');
+            if (nav && hero && window.innerWidth <= 768) {
+                const navHeight = nav.offsetHeight;
+                hero.style.paddingTop = `${navHeight + 20}px`;
+            }
+        };
+        
+        adjustHeroHeight();
+        window.addEventListener('resize', debounce(adjustHeroHeight, 250));
+        
+        console.log('Mobile optimizations initialized successfully!');
+        
+    } catch (error) {
+        console.error('Mobile optimizations initialization failed:', error);
+    }
+};
 });
 
 // Console信息
