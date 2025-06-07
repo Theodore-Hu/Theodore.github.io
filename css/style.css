@@ -2220,14 +2220,14 @@ button, input, textarea {
   
     /* 修复Hero区域被导航栏遮挡问题 */
     .hero-section {
-        min-height: 100vh;
-        padding-top: 100px; /* 增加顶部内边距，避免被导航栏遮挡 */
-    }
-    
-    .hero-content {
-        padding: 40px 15px 80px; /* 底部留出scroll indicator空间 */
-        margin-top: 20px; /* 额外的上边距 */
-    }
+       min-height: 100vh;
+       padding-top: 120px; /* 进一步增加顶部内边距 */
+   }
+   
+   .hero-content {
+       padding: 60px 15px 80px; /* 增加顶部内边距 */
+       margin-top: 0; /* 移除额外的上边距，避免过度偏移 */
+   }
     
     /* 确保导航栏高度一致 */
     .main-nav {
@@ -2240,22 +2240,63 @@ button, input, textarea {
   
     /* 修复按钮重叠和显示问题 */
     .hero-cta {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px; /* 减少间距 */
-        margin-top: 30px; /* 减少上边距 */
-        margin-bottom: 50px; /* 为scroll indicator留空间 */
-    }
-    
-    .hero-cta .btn-primary,
-    .hero-cta .btn-secondary {
-        width: 100%;
-        max-width: 280px; /* 限制最大宽度 */
-        min-height: 50px; /* 确保触摸友好 */
-        padding: 12px 24px;
-        font-size: 14px;
-        justify-content: center;
-    }
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: 20px; /* 增加按钮间距 */
+       margin-top: 40px;
+       margin-bottom: 60px; /* 为scroll indicator留更多空间 */
+       width: 100%;
+       z-index: 10; /* 确保按钮在最上层 */
+   }
+   
+   .hero-cta .btn-primary,
+   .hero-cta .btn-secondary {
+       display: flex !important; /* 强制显示 */
+       width: 90%;
+       max-width: 300px;
+       min-height: 50px;
+       padding: 15px 25px;
+       font-size: 15px;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+       white-space: nowrap;
+       box-sizing: border-box;
+   }
+   
+   /* 额外的Hero区域优化 */
+   .hero-intro {
+       margin-bottom: 15px;
+   }
+   
+   .hero-greeting {
+       font-size: 1rem;
+   }
+   
+   .hero-name {
+       line-height: 1.1;
+       margin-bottom: 15px;
+   }
+   
+   .hero-chinese-name {
+       line-height: 1.2;
+       margin-bottom: 25px;
+   }
+   
+   .hero-subtitle {
+       margin-bottom: 25px;
+       font-size: 1.1rem;
+   }
+   
+   .hero-description {
+       margin-bottom: 35px;
+   }
+   
+   .hero-description p {
+       margin-bottom: 12px;
+       font-size: 1rem;
+   }
     
     /* 调整scroll indicator位置 */
     .scroll-indicator {
@@ -2292,11 +2333,11 @@ button, input, textarea {
     }
   
     .timeline-container {
-        width: 100%;
-        padding-left: 80px; /* 增加左边距，避免重叠 */
-        padding-right: 20px;
-        margin-bottom: 30px;
-    }
+       width: 100%;
+       padding-left: 60px; /* 减少左边距 */
+       padding-right: 20px;
+       margin-bottom: 30px;
+   }
   
     .timeline-container.right {
         left: 0;
@@ -2308,20 +2349,21 @@ button, input, textarea {
     }
   
     .timeline-badge {
-        position: absolute;
-        right: auto;
-        left: -35px; /* 调整徽章位置，避免与内容重叠 */
-        top: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-        z-index: 2;
-    }
-    
-    .timeline-content {
-        padding: 25px 20px; /* 调整内边距 */
-        margin-left: 15px; /* 与徽章保持距离 */
-    }
+       position: absolute;
+       right: auto;
+       left: -15px; /* 调整到框内显示 */
+       top: 20px;
+       width: 40px;
+       height: 40px;
+       font-size: 16px;
+       z-index: 2;
+   }
+   
+   .timeline-content {
+       padding: 25px 20px 25px 50px; /* 左边留出图标空间 */
+       margin-left: 0; /* 移除外边距 */
+       position: relative;
+   }
     
     .timeline-year {
         font-size: 0.9rem;
@@ -2443,10 +2485,28 @@ button, input, textarea {
         padding: 0 15px;
     }
   
-    .hero-content {
-        padding: 20px 15px 70px; /* 进一步调整移动端间距 */
-    }
-  
+    /* 最小屏幕的Hero优化 */
+   .hero-section {
+       padding-top: 100px;
+   }
+   
+   .hero-content {
+       padding: 40px 15px 70px;
+   }
+   
+   .hero-cta {
+       margin-top: 30px;
+       margin-bottom: 70px;
+   }
+   
+   .hero-cta .btn-primary,
+   .hero-cta .btn-secondary {
+       width: 95%;
+       max-width: 280px;
+       font-size: 14px;
+       padding: 12px 20px;
+   }
+
     .hero-name {
         font-size: clamp(2rem, 8vw, 3rem);
     }
@@ -2475,16 +2535,16 @@ button, input, textarea {
     }
     
     .timeline-badge {
-        left: -30px;
-        width: 35px;
-        height: 35px;
-        font-size: 14px;
-    }
-    
-    .timeline-content {
-        padding: 20px 15px;
-        margin-left: 10px;
-    }
+       left: -10px; /* 调整到更合适的位置 */
+       width: 35px;
+       height: 35px;
+       font-size: 14px;
+   }
+   
+   .timeline-content {
+       padding: 20px 15px 20px 40px; /* 左边留出图标空间 */
+       margin-left: 0;
+   }
 
     .about-stats {
         grid-template-columns: 1fr;
