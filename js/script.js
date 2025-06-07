@@ -774,6 +774,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 辅助功能
             initErrorHandling();
             initKeyboardNavigation();
+            initMobileOptimizations(); // 添加移动端优化
             
             console.log('Portfolio website initialized successfully!');
             
