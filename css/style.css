@@ -2218,17 +2218,66 @@ button, input, textarea {
         margin-bottom: 50px;
     }
   
+    /* 修复Hero区域被导航栏遮挡问题 */
     .hero-section {
-        min-height: 600px;
+        min-height: 100vh;
+        padding-top: 100px; /* 增加顶部内边距，避免被导航栏遮挡 */
+    }
+    
+    .hero-content {
+        padding: 40px 15px 80px; /* 底部留出scroll indicator空间 */
+        margin-top: 20px; /* 额外的上边距 */
+    }
+    
+    /* 确保导航栏高度一致 */
+    .main-nav {
+        padding: 12px 0; /* 移动端导航栏高度调整 */
+    }
+    
+    .main-nav.scrolled {
+        padding: 10px 0;
     }
   
+    /* 修复按钮重叠和显示问题 */
     .hero-cta {
         flex-direction: column;
         align-items: center;
+        gap: 15px; /* 减少间距 */
+        margin-top: 30px; /* 减少上边距 */
+        margin-bottom: 50px; /* 为scroll indicator留空间 */
     }
-  
+    
+    .hero-cta .btn-primary,
+    .hero-cta .btn-secondary {
+        width: 100%;
+        max-width: 280px; /* 限制最大宽度 */
+        min-height: 50px; /* 确保触摸友好 */
+        padding: 12px 24px;
+        font-size: 14px;
+        justify-content: center;
+    }
+    
+    /* 调整scroll indicator位置 */
+    .scroll-indicator {
+        bottom: 30px; /* 移动端调整位置 */
+        font-size: 10px;
+    }
+    
+    .scroll-indicator span {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    
+    .scroll-arrow {
+        width: 16px;
+        height: 16px;
+        margin-bottom: 10px;
+    }
+
     .hero-tags {
         justify-content: center;
+        margin-bottom: 30px;
+        gap: 10px;
     }
   
     .tag {
@@ -2236,15 +2285,17 @@ button, input, textarea {
         padding: 6px 15px;
     }
   
-    /* Timeline adjustments */
+    /* 修复Timeline重叠问题 */
     .timeline::after {
-        left: 20px;
+        left: 30px; /* 调整时间线位置 */
+        margin-left: 0;
     }
   
     .timeline-container {
         width: 100%;
-        padding-left: 60px;
+        padding-left: 80px; /* 增加左边距，避免重叠 */
         padding-right: 20px;
+        margin-bottom: 30px;
     }
   
     .timeline-container.right {
@@ -2253,15 +2304,40 @@ button, input, textarea {
   
     .left::after, 
     .right::after {
-        left: 8px;
+        left: 18px; /* 调整圆点位置 */
     }
   
     .timeline-badge {
+        position: absolute;
         right: auto;
-        left: 20px;
-        top: 20px;
+        left: -35px; /* 调整徽章位置，避免与内容重叠 */
+        top: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        z-index: 2;
     }
-  
+    
+    .timeline-content {
+        padding: 25px 20px; /* 调整内边距 */
+        margin-left: 15px; /* 与徽章保持距离 */
+    }
+    
+    .timeline-year {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+    
+    .timeline-title {
+        font-size: 1.2rem;
+        margin-bottom: 6px;
+    }
+    
+    .timeline-company {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
     /* Navigation mobile */
     .nav-toggle {
         display: block;
@@ -2334,6 +2410,28 @@ button, input, textarea {
     .footer-credit {
         text-align: center;
     }
+
+    /* 移动端触摸优化 */
+    .btn-primary, .btn-secondary, .filter-btn, .nav-link {
+        min-height: 44px;
+        padding: 12px 24px;
+    }
+  
+    .gallery-item {
+        height: 250px;
+    }
+  
+    .contact-icon, .info-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+  
+    .theme-toggle {
+        width: 44px;
+        height: 44px;
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -2346,7 +2444,7 @@ button, input, textarea {
     }
   
     .hero-content {
-        padding: 0 15px;
+        padding: 20px 15px 70px; /* 进一步调整移动端间距 */
     }
   
     .hero-name {
@@ -2360,7 +2458,34 @@ button, input, textarea {
     .section-title {
         font-size: clamp(2rem, 8vw, 2.5rem);
     }
-  
+
+    /* 进一步优化Timeline */
+    .timeline::after {
+        left: 25px;
+    }
+    
+    .timeline-container {
+        padding-left: 70px;
+        padding-right: 10px;
+    }
+    
+    .left::after, 
+    .right::after {
+        left: 13px;
+    }
+    
+    .timeline-badge {
+        left: -30px;
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+    
+    .timeline-content {
+        padding: 20px 15px;
+        margin-left: 10px;
+    }
+
     .about-stats {
         grid-template-columns: 1fr;
         gap: 15px;
@@ -2368,14 +2493,6 @@ button, input, textarea {
   
     .form-row {
         grid-template-columns: 1fr;
-    }
-  
-    .timeline-container {
-        padding-left: 50px;
-    }
-  
-    .timeline-content {
-        padding: 20px;
     }
   
     .research-item {
@@ -2406,6 +2523,15 @@ button, input, textarea {
         width: 45px;
         height: 45px;
         font-size: 18px;
+    }
+
+    /* 进一步优化按钮和scroll indicator */
+    .hero-cta {
+        margin-bottom: 60px;
+    }
+    
+    .scroll-indicator {
+        bottom: 20px;
     }
 }
 
