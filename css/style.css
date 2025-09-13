@@ -3119,3 +3119,182 @@ a:hover {
     background: rgba(200, 170, 110, 0.3);
     border: 1px solid rgba(200, 170, 110, 0.5);
 }
+/* ==========================================================================
+   新增的项目卡片样式
+   ========================================================================== */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--color-border);
+    padding: 40px;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(200, 170, 110, 0.2);
+    border-color: var(--color-primary);
+}
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project-title {
+    font-size: 1.4rem;
+    color: var(--color-secondary);
+    margin-bottom: 8px;
+}
+
+.project-subtitle {
+    font-size: 1rem;
+    color: var(--color-gray);
+    margin-bottom: 10px;
+}
+
+.project-meta {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.project-description h5 {
+    color: var(--color-primary);
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.project-description ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.project-description li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    color: var(--color-gray-dark);
+}
+
+.project-description li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+    color: var(--color-primary);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--color-primary-dark);
+    transform: translateX(5px);
+}
+
+/* 发布论文样式 */
+.research-publications {
+    margin-top: 40px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: var(--border-radius-large);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.research-publications h3 {
+    color: var(--color-light);
+    margin-bottom: 25px;
+    font-size: 1.6rem;
+}
+
+.publication-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+}
+
+.publication-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-light);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.publication-content h4 {
+    color: var(--color-light);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.publication-meta {
+    color: var(--color-primary-light);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.publication-content p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .project-card {
+        padding: 25px;
+    }
+    
+    .publication-item {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
