@@ -1227,7 +1227,7 @@ button, input, textarea {
     margin: 0;
 }
 /* ==========================================================================
-   Achievements Section
+   修复 Achievements Section 字体颜色
    ========================================================================== */
 .achievements-container {
     max-width: 1200px;
@@ -1243,10 +1243,10 @@ button, input, textarea {
     align-items: center;
     gap: 15px;
     font-size: 1.8rem;
-    color: var(--color-light);
+    color: var(--color-secondary);  /* 改为深色 */
     margin-bottom: 30px;
     padding-bottom: 15px;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid var(--color-border);
 }
 
 .category-title i {
@@ -1254,121 +1254,51 @@ button, input, textarea {
     font-size: 2rem;
 }
 
-.awards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.award-item {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* 非暗色背景的奖项卡片 */
+.section:not(.dark-section) .award-item {
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--color-border);
     border-radius: var(--border-radius-large);
     padding: 30px;
     text-align: center;
     transition: var(--transition);
     backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-light);
 }
 
-.award-item:hover {
-    background: rgba(255, 255, 255, 0.1);
+.section:not(.dark-section) .award-item:hover {
+    background: var(--color-light);
     transform: translateY(-5px);
-    box-shadow: var(--shadow-dark);
+    box-shadow: var(--shadow);
+    border-color: var(--color-primary);
 }
 
-.award-icon {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 20px;
-    color: var(--color-light);
-    font-size: 24px;
-}
-
-.award-item h4 {
-    color: var(--color-light);
+.section:not(.dark-section) .award-item h4 {
+    color: var(--color-secondary);  /* 深色标题 */
     margin-bottom: 15px;
     font-size: 1.2rem;
 }
 
-.award-item p {
-    color: rgba(255, 255, 255, 0.7);
+.section:not(.dark-section) .award-item p {
+    color: var(--color-gray-dark);  /* 深灰色文字 */
     font-size: 0.9rem;
     margin: 0;
     line-height: 1.6;
 }
 
-.project-highlights {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.project-highlight {
-    display: flex;
-    gap: 30px;
+/* 暗色背景保持原样 */
+.dark-section .award-item {
     background: rgba(255, 255, 255, 0.05);
-    border-radius: var(--border-radius-large);
-    padding: 40px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: var(--transition);
-}
-
-.project-highlight:hover {
-    background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-3px);
-}
-
-.project-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    border-radius: var(--border-radius);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: var(--color-light);
-    font-size: 32px;
-    flex-shrink: 0;
 }
 
-.project-content h4 {
+.dark-section .award-item h4 {
     color: var(--color-light);
-    margin-bottom: 10px;
-    font-size: 1.4rem;
 }
 
-.project-content p {
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 15px;
-}
-
-.project-achievements {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.achievement-badge {
-    background: rgba(59, 130, 246, 0.2);
-    color: var(--color-primary-light);
-    padding: 5px 15px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    border: 1px solid rgba(59, 130, 246, 0.3);
-}
-
-.project-description {
+.dark-section .award-item p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin: 0;
 }
 
 /* ==========================================================================
@@ -1493,37 +1423,8 @@ button, input, textarea {
 }
 
 /* ==========================================================================
-   Enhanced Gallery Section
+   修复 Gallery Section 样式
    ========================================================================== */
-.gallery-filter {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 50px;
-}
-
-.filter-btn {
-    padding: 12px 25px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--color-light);
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: var(--transition);
-    border-radius: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    border-color: var(--color-primary);
-    transform: translateY(-2px);
-}
-
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1538,15 +1439,11 @@ button, input, textarea {
     opacity: 1;
     transform: scale(1);
     transition: var(--transition-slow);
+    cursor: pointer;
 }
 
 .gallery-item.hide {
-    opacity: 0;
-    transform: scale(0.8);
-    height: 0;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    display: none;
 }
 
 .gallery-image {
@@ -1578,6 +1475,7 @@ button, input, textarea {
     align-items: flex-end;
     padding: 30px;
     transition: var(--transition);
+    pointer-events: none;
 }
 
 .gallery-item:hover .gallery-overlay {
@@ -1586,6 +1484,10 @@ button, input, textarea {
 
 .gallery-item:hover .gallery-image img {
     transform: scale(1.1);
+}
+
+.gallery-info {
+    width: 100%;
 }
 
 .gallery-info h3 {
@@ -1610,11 +1512,53 @@ button, input, textarea {
 
 .gallery-tag {
     padding: 4px 12px;
-    background: rgba(59, 130, 246, 0.3);
+    background: rgba(200, 170, 110, 0.3);
     color: var(--color-light);
     border-radius: 12px;
     font-size: 0.75rem;
-    border: 1px solid rgba(59, 130, 246, 0.5);
+    border: 1px solid rgba(200, 170, 110, 0.5);
+}
+
+/* Gallery过滤按钮修复 */
+.gallery-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    background: rgba(200, 170, 110, 0.1);
+    border: 1px solid var(--color-border);
+    color: var(--color-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    border-color: var(--color-primary);
+    color: var(--color-light);
+    transform: translateY(-2px);
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        height: 250px;
+    }
 }
 
 /* ==========================================================================
