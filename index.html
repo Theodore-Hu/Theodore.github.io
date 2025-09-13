@@ -860,27 +860,241 @@
     </section>
     
     <!-- Gallery Section -->
-    <section id="gallery" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Life & Moments</h2>
-                <div class="section-subtitle">Professional Journey & Personal Interests</div>
-                <div class="section-line"></div>
+<section id="gallery" class="section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Life & Moments</h2>
+            <div class="section-subtitle">Professional Journey & Personal Interests</div>
+            <div class="section-line"></div>
+        </div>
+        
+        <div class="gallery-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="professional">Professional</button>
+            <button class="filter-btn" data-filter="academic">Academic</button>
+            <button class="filter-btn" data-filter="personal">Personal</button>
+            <button class="filter-btn" data-filter="leadership">Leadership</button>
+        </div>
+        
+        <div class="gallery-container">
+            <div class="gallery-item professional" data-category="professional">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Construction Site Work" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>工程现场管理</h3>
+                            <p>Project Site Management · Hong Kong · 2025</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Engineering</span>
+                                <span class="gallery-tag">Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="gallery-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="professional">Professional</button>
-                <button class="filter-btn" data-filter="academic">Academic</button>
-                <button class="filter-btn" data-filter="personal">Personal</button>
-                <button class="filter-btn" data-filter="leadership">Leadership</button>
+            <div class="gallery-item academic" data-category="academic">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Research Laboratory" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>流体动力学研究</h3>
+                            <p>Fluid Dynamics Research · Ocean University · 2024</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Research</span>
+                                <span class="gallery-tag">ANSYS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
-            <div class="gallery-container">
-                <!-- Gallery items remain the same as original -->
+            <div class="gallery-item personal" data-category="personal">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Piano Performance" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>钢琴演奏</h3>
+                            <p>Piano Performance · Grade 10 Certification</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Music</span>
+                                <span class="gallery-tag">Performance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item leadership" data-category="leadership">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Team Leadership" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>校友协会管理</h3>
+                            <p>Alumni Association Leadership · 100+ Members · 2020</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Leadership</span>
+                                <span class="gallery-tag">Management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item academic" data-category="academic">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="University Campus" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>中国海洋大学</h3>
+                            <p>Ocean University Campus · Qingdao · 2022-2025</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Academic</span>
+                                <span class="gallery-tag">Campus</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item personal" data-category="personal">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1574623452334-1e0ac2b3ccb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Basketball Championship" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>篮球冠军</h3>
+                            <p>Basketball Championship · Engineering College · 2023</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Sports</span>
+                                <span class="gallery-tag">Champion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item professional" data-category="professional">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="International Business" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>国际贸易运营</h3>
+                            <p>Alibaba International Trade · Dongguan · 2024</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Business</span>
+                                <span class="gallery-tag">International</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item leadership" data-category="leadership">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Alumni Interview Project" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>百年校庆采访项目</h3>
+                            <p>Centennial Alumni Interviews · Project Leader · 2023-2024</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Project</span>
+                                <span class="gallery-tag">Editorial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item personal" data-category="personal">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Gaming & eSports" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>电竞成就</h3>
+                            <p>Dota2 Top 1000 Asia · Gaming Excellence</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Gaming</span>
+                                <span class="gallery-tag">eSports</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item academic" data-category="academic">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1581093458791-9d42e3c7e117?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Graduation Ceremony" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>优秀毕业生</h3>
+                            <p>Outstanding Graduate · Ocean University · 2025</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Achievement</span>
+                                <span class="gallery-tag">Honor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item professional" data-category="professional">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Engineering Work" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>工程实习</h3>
+                            <p>Engineering Internships · Multiple Companies · 2019-2024</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Experience</span>
+                                <span class="gallery-tag">Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery-item personal" data-category="personal">
+                <div class="gallery-image">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                         alt="Volunteer Service" 
+                         loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-info">
+                            <h3>志愿服务</h3>
+                            <p>100+ Hours Volunteer Service · Social Contribution</p>
+                            <div class="gallery-tags">
+                                <span class="gallery-tag">Volunteer</span>
+                                <span class="gallery-tag">Service</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
     
     <!-- Contact Section -->
     <section id="contact" class="section dark-section">
